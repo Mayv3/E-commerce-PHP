@@ -1,0 +1,67 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Camiseta básica de algodón",
+      "categoria": "Camisetas",
+      "precio": 15.99,
+      "descripcion": "Camiseta de manga corta, cuello redondo, 100% algodón.",
+      "imagen": "https://img.freepik.com/fotos-premium/ecommerce-realista-sesion-fotos-primer-plano-camisa-blanca-masculina-cinta-adhesiva-recortes_950002-554131.jpg",
+      "detalle": "Esta camiseta básica de algodón es perfecta para cualquier ocasión. Hecha de algodón de alta calidad, ofrece comodidad durante todo el día. El diseño de manga corta y cuello redondo la hace versátil y fácil de combinar. Ideal para uso diario o para crear looks casuales."
+    },
+    {
+      "id": 2,
+      "nombre": "Jeans slim fit",
+      "categoria": "Pantalones",
+      "precio": 29.99,
+      "descripcion": "Jeans ajustados, estilo slim fit, lavado oscuro.",
+      "imagen": "https://img.freepik.com/fotos-premium/ecommerce-realista-sesion-fotos-primer-plano-camisa-blanca-masculina-cinta-adhesiva-recortes_950002-554131.jpg",
+      "detalle": "Estos jeans slim fit son un imprescindible en tu armario. Con un corte ajustado que realza la figura, estos jeans son ideales para lucir un look moderno y estilizado. Hechos con denim de alta calidad y un lavado oscuro, ofrecen durabilidad y estilo. Perfectos para cualquier ocasión, desde ocasiones casuales hasta salidas nocturnas."
+    },
+    {
+      "id": 3,
+      "nombre": "Sudadera con capucha",
+      "categoria": "Sudaderas",
+      "precio": 24.99,
+      "descripcion": "Sudadera con capucha y bolsillo delantero, 80% algodón y 20% poliéster.",
+      "imagen": "https://img.freepik.com/fotos-premium/ecommerce-realista-sesion-fotos-primer-plano-camisa-blanca-masculina-cinta-adhesiva-recortes_950002-554131.jpg",
+      "detalle": "Esta sudadera con capucha es la prenda perfecta para mantenerte abrigado y con estilo. Fabricada con una mezcla de algodón y poliéster, ofrece comodidad y calidez. El diseño clásico con capucha y bolsillo delantero la hace versátil y práctica. Ideal para llevar en cualquier ocasión, ya sea en casa o en la calle."
+    },
+    {
+      "id": 4,
+      "nombre": "Vestido floral",
+      "categoria": "Vestidos",
+      "precio": 39.99,
+      "descripcion": "Vestido corto con estampado floral, cuello en V y manga larga.",
+      "imagen": "https://img.freepik.com/fotos-premium/ecommerce-realista-sesion-fotos-primer-plano-camisa-blanca-masculina-cinta-adhesiva-recortes_950002-554131.jpg",
+      "detalle": "Este hermoso vestido floral es perfecto para eventos casuales y ocasiones especiales. Con un estampado floral vibrante y femenino, este vestido agrega un toque de estilo primaveral a tu guardarropa. El cuello en V y las mangas largas añaden un toque elegante, mientras que el corte corto lo hace moderno y juvenil. Un must-have para cualquier fashionista."
+    },
+    {
+      "id": 5,
+      "nombre": "Zapatillas deportivas",
+      "categoria": "Calzado",
+      "precio": 49.99,
+      "descripcion": "Zapatillas deportivas, diseño moderno, suela de goma antideslizante.",
+      "imagen": "https://img.freepik.com/fotos-premium/ecommerce-realista-sesion-fotos-primer-plano-camisa-blanca-masculina-cinta-adhesiva-recortes_950002-554131.jpg",
+      "detalle": "Estas zapatillas deportivas son ideales para cualquier actividad física. Con un diseño moderno y atractivo, ofrecen comodidad y estilo. La suela de goma antideslizante proporciona tracción y estabilidad en cualquier terreno. Perfectas para correr, hacer ejercicio en el gimnasio o simplemente para lucir un look deportivo casual."
+    },
+    {
+      "id": 6,
+      "nombre": "Chaqueta de cuero",
+      "categoria": "Chaquetas",
+      "precio": 79.99,
+      "descripcion": "Chaqueta de cuero genuino, estilo clásico con cierre de cremallera.",
+      "imagen": "https://img.freepik.com/fotos-premium/ecommerce-realista-sesion-fotos-primer-plano-camisa-blanca-masculina-cinta-adhesiva-recortes_950002-554131.jpg",
+      "detalle": "Esta chaqueta de cuero es una pieza atemporal que nunca pasa de moda. Hecha de cuero genuino de alta calidad, ofrece durabilidad y estilo. El diseño clásico con cierre de cremallera y bolsillos laterales la hace versátil y práctica. Ideal para lucir un look casual elegante o para complementar un outfit más formal."
+    },
+    {
+      "id": 7,
+      "nombre": "Chaqueta de cuero",
+      "categoria": "Chaquetas",
+      "precio": 79.99,
+      "descripcion": "Chaqueta de cuero genuino, estilo clásico con cierre de cremallera.",
+      "imagen": "https://img.freepik.com/fotos-premium/ecommerce-realista-sesion-fotos-primer-plano-camisa-blanca-masculina-cinta-adhesiva-recortes_950002-554131.jpg",
+      "detalle": "Esta chaqueta de cuero es una pieza atemporal que nunca pasa de moda. Hecha de cuero genuino de alta calidad, ofrece durabilidad y estilo. El diseño clásico con cierre de cremallera y bolsillos laterales la hace versátil y práctica. Ideal para lucir un look casual elegante o para complementar un outfit más formal."
+    }
+  ]
+}
