@@ -1,0 +1,92 @@
+:root {
+    --text-color: #ffffff;
+    --bg-background-secondary: #bd374c;
+}
+
+*{
+    font-family: "Poppins", sans-serif
+}
+
+
+.form-control:focus {
+    box-shadow: none;
+}
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 100;
+    background-color:black;
+}
+
+main{
+    padding-top: 50px;
+    min-height: 95vh;
+}
+nav{
+   padding: 40px;
+   background-color: transparent; 
+}
+nav a{
+   color: var(--text-color) !important;
+}
+
+footer{
+    height: 5vh;
+    background-color: black; 
+}
+svg{
+   fill: var(--bg-background-secondary);
+}
+#banner {
+    background-image: url('https://img.freepik.com/free-photo/european-brunette-woman-black-panama-white-trendy-jacket-posing-pink-background-isolate-raised-her-hands-top_273443-4053.jpg?t=st=1713734110~exp=1713737710~hmac=90257412a7916201ceb47a3dffbaf39b6ac47a5e4172c88a24f30cb0c15552a2&w=1380');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 95vh;
+}
+.carrito:hover{
+    color: #063f36;
+    background-color: white;
+}
+.bg-effect{
+    height: 95vh;
+    background-color: rgba(0, 0, 0, 0.300);
+}
+
+.btn{
+    padding: .7rem 4rem;
+    color: white;
+    background-color: black;
+}
+.carrito{
+    color: black;
+    background-color: white;
+}
+.carrito:hover{ 
+    background-color: var(--bg-background-secondary);
+    color: white !important;
+}
+.home-info{
+    margin-left: 15rem !important;
+}
+.inputsubmit{
+    background-color: var(--bg-background); 
+    color: white;
+}
+.inputsubmit:hover{
+    background-color: var(--bg-background-secondary) !important; 
+    color: white;
+}
+.ftco-section > .container{
+    min-width: 80vw;
+    max-width: 80vw;
+    min-height: 60vh;
+    max-height: 100vh;
+}
+.info-container{
+    background-color: var(--bg-background);
+}
+.card-img{
+    height: 300px;
+    object-fit: cover;
+}
