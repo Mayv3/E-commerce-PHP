@@ -56,7 +56,7 @@ if (!isset($routes[$view])) {
                                 href="index.php?section=contact">Contacto</a></li>
                     </ul>
                     <div class="d-flex">
-                        <button class="btn carrito text-black" type="submit">
+                        <button class="btn carrito text-white" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Carrito
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
