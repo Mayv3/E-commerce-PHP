@@ -1,16 +1,9 @@
 :root {
-    --bg-background: #bd374c;
-    --text-color: #ffffff;
-    --bg-background-secondary: #063f36;
+    --bg-background: #d13e54;
+    --bg-background-secondary: #bd374c;
 }
-
 *{
     font-family: "Poppins", sans-serif
-}
-
-
-.form-control:focus {
-    box-shadow: none;
 }
 header{
     position: fixed;
@@ -25,11 +18,11 @@ main{
     min-height: 95vh;
 }
 nav{
-   padding: 40px;
-   background-color: transparent; 
+    padding: 40px;
+    background-color: transparent; 
 }
 nav a{
-   color: var(--text-color) !important;
+    color: var(--text-color) !important;
 }
 
 footer{
@@ -70,12 +63,15 @@ svg{
 .home-info{
     margin-left: 15rem !important;
 }
+.form-control:focus {
+    box-shadow: none;
+}
 .inputsubmit{
-    background-color: var(--bg-background); 
+    background-color: var(--bg-background) !important; 
     color: white;
 }
 .inputsubmit:hover{
-    background-color: var(--bg-background-secondary) !important; 
+    background-color: red !important; 
     color: white;
 }
 .ftco-section > .container{
@@ -84,10 +80,10 @@ svg{
     min-height: 60vh;
     max-height: 100vh;
 }
-.info-container{
-    background-color: var(--bg-background);
-}
 .card-img{
     height: 300px;
     object-fit: cover;
+}
+ul > li{
+   list-style: none;
 }

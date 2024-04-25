@@ -1,15 +1,14 @@
 <?php
 require "readJsonFile.php";
-function getProductoById($id){
-    $db = 'productos.json';
-    $data = readJsonFile($db)['productos'];
-
+function getProductById($id) {
+    $db = 'products.json';
+    $data = readJsonFile($db);
     if (isset($data)):
         $resultado = array_filter($data,function($producto) use ($id){
-            return $producto['id'] == $id;
+            return $producto->id == $id;
         });
-        //para que retorne el primer elemento sin importar el indice
         if ($resultado):
+            //reset para que retorne el primer elemento sin importar el indice
             return reset($resultado);
         endif;
     else:
