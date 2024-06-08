@@ -16,6 +16,7 @@ function parse_data($data): array
 {
     $parsed_data = [];
     //itera elementos y convierte a instancia de objeto
+
     foreach ($data as $key => $element) {
         $producto = new Product(
             $element['image'],
@@ -27,7 +28,7 @@ function parse_data($data): array
         );
         array_push($parsed_data, $producto);
         //tambien puede usarse $parsed_data[] = $producto
-    }
+    };
 
     return $parsed_data;
 }

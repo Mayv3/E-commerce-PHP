@@ -9,12 +9,10 @@ require "./utilities/readJsonFile.php";
             <?php
             $db = 'products.json';
             $products = read_json_file($db);
-
             if (isset($products) && is_array($products)):
                 foreach ($products as $product) {
                     echo $product->render();
-                }
-                ;
+                };
             else:
                 echo "<h2>No se pudo cargar la lista de productos</h2>";
             endif;
