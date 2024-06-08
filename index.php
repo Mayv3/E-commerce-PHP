@@ -36,7 +36,7 @@ if (!isset($routes[$view])) {
 </head>
 
 <body>
-    <header bg-dark>
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-4 px-lg-5">
                 <img class="img-fluid logo-cubo" src="img/logo-cubo.png" alt="Qubo indumentaria icono">
