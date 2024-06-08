@@ -1,7 +1,6 @@
 <?php
 require_once "./utilities/readJsonFile.php";
-
-$data = readJsonFile('products.json');
+$data = read_json_file('products.json');
 shuffle($data); //desordena el array para generar aleatoriedad
 $interesants = array_slice($data, 0, 4);
 ?>
@@ -12,4 +11,3 @@ $interesants = array_slice($data, 0, 4);
         ?>
     <?php endforeach ?>
 </ul>
-</div>

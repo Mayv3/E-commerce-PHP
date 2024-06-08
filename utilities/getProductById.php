@@ -3,7 +3,7 @@ require "readJsonFile.php";
 function getProductById($id)
 {
     $db = 'products.json';
-    $data = readJsonFile($db);
+    $data = read_json_file($db);
     if (isset($data)):
         $resultado = array_filter($data, function ($producto) use ($id) {
             return $producto->id == $id;

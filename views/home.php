@@ -11,6 +11,6 @@
     </div>
     <div class="p-5 m-5">
         <h2>Ofertas destacadas</h2>
-        <?php require ("./components/RandomList.php"); ?>
+        <?php require "./components/RandomList.php"; ?>
     </div>
 </section>
