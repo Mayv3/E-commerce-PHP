@@ -1,10 +1,11 @@
 <?php
 require "readJsonFile.php";
-function getProductById($id) {
+function getProductById($id)
+{
     $db = 'products.json';
     $data = readJsonFile($db);
     if (isset($data)):
-        $resultado = array_filter($data,function($producto) use ($id){
+        $resultado = array_filter($data, function ($producto) use ($id) {
             return $producto->id == $id;
         });
         if ($resultado):
