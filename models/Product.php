@@ -24,7 +24,7 @@ class Product
             <li class="col-lg-3 col-md-6 col-s-12">
                 <div class="mb-5">
                     <div class="card h-100">
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                        <div class="badge bg-dark text-white position-absolute">Sale</div>
                         <img class="card-img" src="' . $this->image . '" alt="' . $this->name . '">
                         <div class="card-body p-4">
                             <div class="text-center">
