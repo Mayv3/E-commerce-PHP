@@ -9,14 +9,14 @@ if (isset($product->id)):
     <div class="container px-4 px-lg-5 my-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="<?= $product->image ?>"
-                    alt="<?= $product->name ?>" /></div>
+                    alt="<?= $product->name ?>"></div>
             <div class="col-md-6">
                 <div class="small mb-1">SKU: <?= $product->id ?></div>
                 <h1 class="display-5 fw-bolder"><?= $product->name ?></h1>
                 <div class="fs-5 mb-5">
                     <span>$<?= $product->price ?></span>
                 </div>
-                <p class="lead"><strong><?= $product->description ?></strong></>
+                <p class="lead"><strong><?= $product->description ?></strong></p>
                 <p class="lead"><?= $product->detail ?></p>
                 <div class="d-flex">
                     <label for="quantity" class="visually-hidden">Cantidad</label>
@@ -28,7 +28,7 @@ if (isset($product->id)):
                 </div>
             </div>
         </div>
-        <p class="fw-bold fs-3 mt-5">Tambien podria interesarte</p>
+        <p class="fw-bold fs-3 mt-5">También podría interesarte</p>
         <?= require "./components/RandomList.php" ?>
     </div>
     <!-- si el id no existe renderiza error -->
