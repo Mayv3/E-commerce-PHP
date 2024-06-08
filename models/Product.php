@@ -28,7 +28,7 @@ class Product
                         <img class="card-img" src="' . $this->image . '" alt="' . $this->name . '">
                         <div class="card-body p-4">
                             <div class="text-center">
-                                <h5 class="fw-bolder">' . $this->name . '</h5>
+                                <p class="fw-bolder fs-4">' . $this->name . '</p>
                                 <span class="text-muted text-decoration-line-through">$' . ($this->price + 5) . '</span> $' . $this->price . '
                             </div>
                         </div>
