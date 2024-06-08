@@ -37,11 +37,11 @@ if (!isset($routes[$view])) {
 
 <body>
     <header bg-dark>
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-4 px-lg-5">
                 <img class="img-fluid logo-cubo" src="img/logo-cubo.png" alt="Qubo indumentaria icono">
                 <a class="navbar-brand " href="index.php?section=home">Qubo Indumentaria</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
                         class="navbar-toggler-icon"></span></button>
