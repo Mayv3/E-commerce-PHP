@@ -29,7 +29,7 @@ class Product
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <h5 class="fw-bolder">' . $this->name . '</h5>
-                                <span class="text-muted text-decoration-line-through">' . ($this->price + 5) . '</span> ' . $this->price . '
+                                <span class="text-muted text-decoration-line-through">$' . ($this->price + 5) . '</span> $' . $this->price . '
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
