@@ -2,7 +2,8 @@
 require "./utilities/getProductById.php";
 
 $id = isset($_GET['id_producto']) ? $_GET['id_producto'] : null;
-$product = getProductById($id);
+$product = get_product_by_id(1);
+
 
 if (isset($product->id)):
     ?>
