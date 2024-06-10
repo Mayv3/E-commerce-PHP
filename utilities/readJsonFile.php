@@ -10,7 +10,6 @@ function read_json_file($db): array|string
         return 'Error: El archivo no existe';
     endif;
 }
-
 // return Productos[]
 function parse_data($data): array
 {
@@ -28,7 +27,8 @@ function parse_data($data): array
         );
         array_push($parsed_data, $producto);
         //tambien puede usarse $parsed_data[] = $producto
-    };
+    }
+    ;
 
     return $parsed_data;
 }
