@@ -1,8 +1,11 @@
 <?php
-require_once "./utilities/readJsonFile.php";
-$data = read_json_file('products.json');
-shuffle($data); //desordena el array para generar aleatoriedad
-$interesants = array_slice($data, 0, 4);
+require_once "./utilities/getAllProducts.php";
+#make fetch to db
+$data = get_all_products();
+
+shuffle($data); //randomize array
+$interesants = array_slice($data, 0, 4); // subtracts an slice
+
 ?>
 <ul class="row list-unstyled">
     <?php foreach ($interesants as $key => $product): ?>
