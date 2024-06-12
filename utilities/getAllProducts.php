@@ -4,8 +4,8 @@ require_once ('./connection.php');
 function get_all_products()
 {
     try {
-
-        $response = make_query('SELECT * FROM items');
+        $query = 'SELECT * FROM items';
+        $response = make_query($query);
         return parse_data($response);
 
     } catch (Exception $e) {
