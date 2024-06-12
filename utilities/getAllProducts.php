@@ -1,6 +1,7 @@
 <?php
-require_once ('./models/Product.php');
-require_once ('./connection.php');
+require_once (__DIR__ . '/../models/Product.php');
+require_once (__DIR__ . '/../connection.php');
+
 function get_all_products()
 {
     try {
@@ -19,7 +20,6 @@ function get_all_products()
 function parse_data($data): array
 {
     $parsed_data = [];
-    //itera elementos y convierte a instancia de objeto
 
     foreach ($data as $key => $element) {
         $producto = new Product(

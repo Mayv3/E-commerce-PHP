@@ -176,3 +176,7 @@ p a {
 p a:hover {
   text-decoration: underline;
 }
+
+.td-img img {
+  max-width: 2rem;
+}
