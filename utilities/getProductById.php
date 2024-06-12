@@ -4,8 +4,8 @@ require_once ('connection.php');
 function get_product_by_id($id)
 {
     #creates and executes query
-    $QUERY = "SELECT * FROM items WHERE id_item=$id";
-    $response = make_query($QUERY)[0];
+    $query = "SELECT * FROM items WHERE id_item= ?";
+    $response = make_query($query, [$id])[0]; # we use [0] because 'make_query' is using fetchALL
 
     #creates a new 'Product' instance
     $product = new Product($response['image_url'], $response['item_name'], $response['item_price'], $response['id_item'], $response['item_description'], $response['detail_item']);
