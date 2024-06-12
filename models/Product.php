@@ -1,12 +1,12 @@
 <?php
 class Product
 {
-    public $image;
-    public $name;
-    public $price;
-    public $id;
-    public $detail;
-    public $description;
+    private $image;
+    private $name;
+    private $price;
+    private $id;
+    private $detail;
+    private $description;
 
     public function __construct($image, $name, $price, $id, $description, $detail)
     {
@@ -28,7 +28,7 @@ class Product
                         <img class="card-img" src="' . $this->image . '" alt="' . $this->name . '">
                         <div class="card-body p-4">
                             <div class="text-center">
-                                <p class="fw-bolder fs-4">' . $this->name . '</p>
+                                <p class="fw-bolder text-dark fs-4">' . $this->name . '</p>
                                 <span class="text-muted text-decoration-line-through">$' . ($this->price + 5) . '</span> $' . $this->price . '
                             </div>
                         </div>
@@ -40,4 +40,36 @@ class Product
             </li>
         ';
     }
+
+    public function get_image()
+    {
+        return $this->image;
+    }
+
+    public function get_name()
+    {
+        return $this->name;
+    }
+
+    public function get_price()
+    {
+        return $this->price;
+    }
+
+    public function get_id()
+    {
+        return $this->id;
+    }
+
+    public function get_detail()
+    {
+        return $this->detail;
+    }
+
+    public function get_description()
+    {
+        return $this->description;
+    }
+
+
 }
