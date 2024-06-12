@@ -46,19 +46,12 @@ if (!isset($routes[$view])) {
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page"
-                                href="index.php?section=dashboard">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"
                                 href="index.php?section=login">Iniciar sesion</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                href="index.php?section=dashboard">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page"
                                 href="index.php?section=products">Productos</a></li>
                     </ul>
-                    <div class="d-flex">
-                        <button class="btn carrito text-white" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Carrito
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </div>
                 </div>
             </div>
         </nav>

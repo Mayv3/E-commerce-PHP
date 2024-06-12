@@ -21,16 +21,16 @@ require_once '../utilities/getAllProducts.php';
             </thead>
             <tbody>
                 <?php
-                $products = get_all_products(); // Obtener productos
-                
+                $products = get_all_products();
+
                 foreach ($products as $product) {
                     echo '<tr>';
-                    echo '<td>' . $product->id . '</td>';
-                    echo '<td>' . $product->name . '</td>';
-                    echo '<td>' . $product->price . '</td>';
-                    echo '<td>' . $product->description . '</td>';
-                    echo '<td><img src="' . $product->image . '" alt="' . $product->name . '"></td>';
-                    echo '<td>' . $product->detail . '</td>';
+                    echo '<td>' . $product->get_id() . '</td>';
+                    echo '<td>' . $product->get_name() . '</td>';
+                    echo '<td>' . $product->get_price() . '</td>';
+                    echo '<td>' . $product->get_description() . '</td>';
+                    echo '<td><img class="w-75" src="' . $product->get_image() . '" alt="' . $product->get_name() . '"></td>';
+                    echo '<td>' . $product->get_detail() . '</td>';
                     echo '</tr>';
                 }
                 ?>
