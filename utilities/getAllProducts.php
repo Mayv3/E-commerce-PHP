@@ -29,6 +29,7 @@ function parse_data($data): array
             $element['id_item'],
             $element['item_description'],
             $element['detail_item'],
+            $element['item_category'],
         );
 
         $parsed_data[] = $producto;

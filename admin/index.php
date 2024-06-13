@@ -3,6 +3,7 @@ $routes = [
     'login' => [],
     'dashboard' => [],
     'products' => [],
+    'newProduct' => [],
 ];
 
 $view = isset($_GET['section']) ? $_GET['section'] : 'dashboard';

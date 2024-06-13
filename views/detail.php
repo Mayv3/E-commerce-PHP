@@ -15,6 +15,8 @@ if (isset($product)):
                 <h1 class="display-5 fw-bolder"><?= $product->get_name() ?></h1>
                 <div class="fs-5 mb-5">
                     <span>$<?= $product->get_price() ?></span>
+                    <br>
+                    <span>Categoria: <?= $product->get_category() ?></span>
                 </div>
                 <p class="lead text-dark"><strong><?= $product->get_description() ?></strong></p>
                 <p class="lead text-dark"><?= $product->get_detail() ?></p>
