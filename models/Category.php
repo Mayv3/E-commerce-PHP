@@ -8,7 +8,6 @@ class Category
     {
         $this->id_category = $id_category;
         $this->category_name = $category_name;
-
     }
 
     public function get_id_category()

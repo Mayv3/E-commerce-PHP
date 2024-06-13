@@ -31,7 +31,7 @@ if (isset($product)):
             </div>
         </div>
         <p class="fw-bold fs-3 mt-5">También podría interesarte</p>
-        <?= require "./components/RandomList.php" ?>
+        <?php require "./components/RandomList.php" ?>
     </div>
     <!-- si el id no existe renderiza error -->
 <?php else: ?>

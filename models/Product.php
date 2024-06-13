@@ -32,13 +32,12 @@ class Product
                             <div class="text-center">
                                 <p class="fw-bolder text-dark fs-4">' . $this->name . '</p>
                                 <span class="text-muted text-decoration-line-through">$' . ($this->price + 5) . '</span> $' . $this->price . '
-                                <p class="fw-bolder text-dark fs-4"> Categoria: ' . $this->category . '</p>
+                                <p class="text-dark fs-5"> Categoria: ' . $this->category . '</p>
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <div class="text-center"><a class="btn mt-auto" href="index.php?section=detail&id_producto=' . $this->id . '">Ver</a></div>
                         </div>
-
                     </div>
                 </div>
             </li>
