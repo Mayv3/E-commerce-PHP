@@ -6,37 +6,32 @@ function get_all_products()
 {
     try {
 
-        $query = 'SELECT * FROM items';
+        #make query with join
+        $query = make_query('SELECT items.*, categories.category_name FROM items JOIN categories ON items.item_category = categories.id_category');
 
-        $response = make_query($query);
+        $products = [];
 
-        return parse_data($response);
+        #converts all query into a 'Product' instance
+        foreach ($query as $key => $element) {
+
+            $producto = new Product(
+                $element['image_url'],
+                $element['item_name'],
+                $element['item_price'],
+                $element['id_item'],
+                $element['item_description'],
+                $element['detail_item'],
+                $element['category_name'],
+            );
+
+            $products[] = $producto;
+        }
+
+        return $products;
 
     } catch (Exception $e) {
 
         echo "Ocurrio un error leyendo la base de datos: " . $e->getMessage();
 
     }
-}
-
-// return Productos[]
-function parse_data($data): array
-{
-    $parsed_data = [];
-
-    foreach ($data as $key => $element) {
-        $producto = new Product(
-            $element['image_url'],
-            $element['item_name'],
-            $element['item_price'],
-            $element['id_item'],
-            $element['item_description'],
-            $element['detail_item'],
-            $element['item_category'],
-        );
-
-        $parsed_data[] = $producto;
-    }
-
-    return $parsed_data;
 }
