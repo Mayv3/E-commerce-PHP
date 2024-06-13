@@ -1,12 +1,15 @@
 <?php
 require_once (__DIR__ . '/../models/Product.php');
-require_once (__DIR__ . '/../connection.php');
+require_once (__DIR__ . '/makeQuery.php');
 
 function get_all_products()
 {
     try {
+
         $query = 'SELECT * FROM items';
+
         $response = make_query($query);
+
         return parse_data($response);
 
     } catch (Exception $e) {

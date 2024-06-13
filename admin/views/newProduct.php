@@ -1,9 +1,7 @@
 <?php
-require_once './class/categories.php';
+require_once __DIR__ . '/../../utilities/getAllCategories.php';
 
-$categoriesInstance = new Categories();
-
-$categories = $categoriesInstance->all_categories();
+$categories = get_all_categories();
 ?>
 
 <main class="container w-50">
@@ -31,8 +29,8 @@ $categories = $categoriesInstance->all_categories();
                     <label for="category">Categoria</label>
                     <select name="category" id="category" class="form-control">
                         <?php foreach ($categories as $category): ?>
-                            <option value="<?php echo $category->get_id_category(); ?>">
-                                <?php echo $category->get_category_name(); ?>
+                            <option value="<?php echo $category->get_id_category() ?>">
+                                <?php echo $category->get_category_name() ?>
                             </option>
                         <?php endforeach; ?>
                     </select>

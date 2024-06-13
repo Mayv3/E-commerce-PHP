@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../../connection.php';
+require_once __DIR__ . '/../../utilities/makeQuery.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -16,11 +16,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $params = [$titulo, $price, $descripcion, $detail, $category, $image];
 
     try {
+
         $result = make_query($query, $params);
 
     } catch (Exception $e) {
+
         echo "Error al agregar el producto: " . $e->getMessage();
+
     }
+
     header('Location: ../index.php?section=products');
     exit;
 }
