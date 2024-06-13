@@ -7,7 +7,6 @@ class Product
     private $id;
     private $detail;
     private $description;
-
     private $category;
     public function __construct($image, $name, $price, $id, $description, $detail, $category)
     {
