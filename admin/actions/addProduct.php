@@ -7,9 +7,10 @@ $price = $_POST['price'];
 $description = $_POST['description'];
 $detail = $_POST['detail'];
 $category = $_POST['category'];
-$image = '';
+$image = $_FILES['image'];
 
 $errors = [];
+
 
 //Validate product name
 if (empty($tittle)):
@@ -56,9 +57,15 @@ if (count($errors) > 0):
     exit;
 endif;
 
+$nameImage = '';
+if (!empty($image['tmp_name'])):
+    $nameImage = date('Ymd_his') . '_' . $image['name'];
+    move_uploaded_file($image['tmp_name'], __DIR__ . '/../../img/' . $nameImage);
+endif;
+
 //Insert product into database
 $query = "INSERT INTO items (item_name, item_price, item_description, detail_item, item_category, image_url) VALUES (?, ?, ?, ?, ?, ?)";
-$params = [$tittle, $price, $description, $detail, $category, $image];
+$params = [$tittle, $price, $description, $detail, $category, $nameImage];
 
 try {
     $result = make_query($query, $params);
