@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/../../utilities/makeQuery.php';
+require_once __DIR__ . '/../../utilities/getProductById.php';
 
 $id = $_GET['id']; //obtained by url
 
@@ -9,7 +10,7 @@ $price = $_POST['price'];
 $description = $_POST['description'];
 $detail = $_POST['detail'];
 $category = $_POST['category'];
-$image = '';
+$image = $_FILES['image'];
 
 $errors = [];
 
@@ -57,18 +58,44 @@ if (count($errors) > 0):
     exit;
 endif;
 
-//edit product in database
-$query = "UPDATE items
-          SET item_name = ?,
-          item_price = ?,
-          item_description = ?,
-          detail_item = ?,
-          item_category = ?,
-          image_url = ?
-          WHERE id_item = ?";
-$params = [$tittle, $price, $description, $detail, $category, $image, $id];
+if ($image['name'] !== ''): //if the user sent a new image file
 
-print_r($id);
+
+    $nameImage = '';
+    if (!empty($image['tmp_name'])):
+        $nameImage = date('Ymd_his') . '_' . $image['name'];
+        move_uploaded_file($image['tmp_name'], __DIR__ . '/../../img/' . $nameImage);
+    endif;
+
+    //the code below is used to delete the old photo
+    $product = get_product_by_id($id); //get the old product data to find the image
+    $file_to_delete = __DIR__ . '/../../img/' . $product->get_image();
+    if (file_exists($file_to_delete)) {
+        unlink($file_to_delete);
+    }
+
+    //edit product in database with new image
+    $query = "UPDATE items
+              SET item_name = ?,
+              item_price = ?,
+              item_description = ?,
+              detail_item = ?,
+              item_category = ?,
+              image_url = ?
+              WHERE id_item = ?";
+    $params = [$tittle, $price, $description, $detail, $category, $nameImage, $id];
+else:
+    //edit product in database WITHOUT touching the old image
+    $query = "UPDATE items
+              SET item_name = ?,
+              item_price = ?,
+              item_description = ?,
+              detail_item = ?,
+              item_category = ?
+              WHERE id_item = ?";
+    $params = [$tittle, $price, $description, $detail, $category, $id];
+endif;
+
 
 try {
     $result = make_query($query, $params);

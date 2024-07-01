@@ -11,20 +11,20 @@ $products = get_all_products();
             producto nuevo</a>
     </div>
     <?php if (count($products) > 0): ?>
-        <?php foreach ($products as $product): ?>
-            <table class="table">
-                <thead>
-                    <tr class="text-center">
-                        <th>ID</th>
-                        <th>NOMBRE</th>
-                        <th>PRECIO</th>
-                        <th>DESCRIPCION</th>
-                        <th>IMAGEN</th>
-                        <th>CATEGORIA</th>
-                        <th>DETALLE</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>PRECIO</th>
+                    <th>DESCRIPCION</th>
+                    <th>IMAGEN</th>
+                    <th>CATEGORIA</th>
+                    <th>DETALLE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($products as $product): ?>
 
 
                     <tr>

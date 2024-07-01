@@ -14,8 +14,8 @@ if ($product == null):
 else:
     ?>
     <section>
-        <h1 class="mb-4 display-5">Publicar un nuevo producto</h1>
-        <form action='actions/editProduct.php?id=<?php echo $id ?>' method="post">
+        <h1 class="mb-4 display-5">Editar un producto</h1>
+        <form action='actions/editProduct.php?id=<?php echo $id ?>' method="post" enctype="multipart/form-data">
             <div class="pb-3">
                 <label for="tittle" class="h5">Título <span class="small">(mínimo 5 caracteres)</span></label>
                 <input type="text" id="tittle" name="tittle" class="form-control"
