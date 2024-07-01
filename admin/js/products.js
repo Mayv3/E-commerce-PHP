@@ -15,7 +15,7 @@ function render_confirm_modal(id) {
   );
 
   const buttons_container = document.createElement("div");
-  buttons_container.className = "d-flex gap-2";
+  buttons_container.className = "d-flex gap-2 align-items-center";
   modal.appendChild(buttons_container);
 
   //modal confirm button and action
@@ -27,12 +27,12 @@ function render_confirm_modal(id) {
   const link_confirm = document.createElement("a");
   link_confirm.href = `./actions/deleteProduct.php?id=${id}`;
   link_confirm.textContent = "Confirmar";
-  link_confirm.className = "btn button-confirm rounded p-2";
+  link_confirm.className = "primary-button add-product-button rounded p-2";
   form.appendChild(link_confirm);
 
   const button_cancel = document.createElement("button");
   button_cancel.textContent = "Cancelar";
-  button_cancel.className = "btn btn-danger rounded p-2";
+  button_cancel.className = "primary-button delete-button rounded p-2";
   button_cancel.addEventListener("click", function () {
     modal_container.remove();
   });

@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../../utilities/makeQuery.php';
 session_start();
+
 $id = $_GET['id'];
 
 if ($id) {
