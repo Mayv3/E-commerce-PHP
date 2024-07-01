@@ -10,9 +10,11 @@ $oldData = $_SESSION['old-data'] ?? [];
 unset($_SESSION['old-data']);
 ?>
 
+
+
 <section>
     <h1 class="mb-4 display-5">Publicar un nuevo producto</h1>
-    <form action="actions/addProduct.php" method="post">
+    <form action="actions/addProduct.php" method="post" enctype="multipart/form-data">
         <div class="pb-3">
             <label for="tittle" class="h5">Título <span class="small">(mínimo 5 caracteres)</span></label>
             <input type="text" id="tittle" name="tittle" class="form-control" value="<?= $oldData['tittle'] ?? '' ?>"
