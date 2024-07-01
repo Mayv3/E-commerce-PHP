@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../../utilities/makeQuery.php';
 require_once __DIR__ . '/../../utilities/getProductById.php';
 session_start();
+
 $id = $_GET['id'];
 
 if ($id) {

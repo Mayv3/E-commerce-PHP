@@ -170,6 +170,7 @@ ul > li {
 .signUp-form a:hover {
   text-decoration: underline;
 }
+
 p {
   margin-top: 1rem;
   color: #fff;
@@ -186,20 +187,24 @@ p a:hover {
   max-width: 2rem;
 }
 
-.add-product {
-  background-color: green;
-  color: white;
+.primary-button {
   padding: 0.5rem 0.25rem;
   border-radius: 5px;
   text-decoration: none;
+  color: white;
+  border: none;
+}
+
+.add-product-button {
+  background-color: green;
+}
+
+.edit-button {
+  background-color: orange;
 }
 
 .delete-button {
-  border-radius: 5px;
-  padding: 0.25rem;
-  border: none;
   background-color: red;
-  color: white;
 }
 /* modal styles */
 
@@ -223,4 +228,9 @@ p a:hover {
 .button-confirm {
   background-color: green;
   color: white;
+}
+
+.error-text {
+  color: red;
+  font-size: 2rem;
 }
