@@ -12,21 +12,22 @@ function get_all_products()
         $products = [];
 
         #converts all query into a 'Product' instance
-        foreach ($query as $key => $element) {
+        if ($query !== null) {
+            foreach ($query as $key => $element) {
 
-            $producto = new Product(
-                $element['image_url'],
-                $element['item_name'],
-                $element['item_price'],
-                $element['id_item'],
-                $element['item_description'],
-                $element['detail_item'],
-                $element['category_name'],
-            );
+                $producto = new Product(
+                    $element['image_url'],
+                    $element['item_name'],
+                    $element['item_price'],
+                    $element['id_item'],
+                    $element['item_description'],
+                    $element['detail_item'],
+                    $element['category_name'],
+                );
 
-            $products[] = $producto;
+                $products[] = $producto;
+            }
         }
-
         return $products;
 
     } catch (Exception $e) {
