@@ -13,7 +13,7 @@ if (!isset($routes[$view])) {
     $view = '404';
 }
 
-$menssage = $_SESSION['message'] ?? null;
+$message = $_SESSION['message'] ?? null;
 $messageType = $_SESSION['message_type'] ?? null;
 unset($_SESSION['message']);
 unset($_SESSION['message_type']);
@@ -66,8 +66,8 @@ unset($_SESSION['message_type']);
     <main class="d-flex justify-content-center align-items-center flex-column mt-5">
 
         <?php
-        if ($menssage !== null): ?>
-            <div class="alert  alert-<?= $messageType ?>"><?= $menssage ?></div>
+        if ($message !== null): ?>
+            <div class="alert  alert-<?= $messageType ?>"><?= $message ?></div>
         <?php endif;
         ?>
 
@@ -82,6 +82,9 @@ unset($_SESSION['message_type']);
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <?php if ($view == 'products') { ?>
+        <script src="./js/products.js"></script>
+    <?php } ?>
 </body>
 
 </html>
