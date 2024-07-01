@@ -68,6 +68,9 @@ if (!isset($routes[$view])) {
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <?php if ($view == 'products') { ?>
+        <script src="./js/products.js"></script>
+    <?php } ?>
 </body>
 
 </html>
