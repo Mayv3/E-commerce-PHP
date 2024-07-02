@@ -5,7 +5,7 @@ $products = get_all_products();
 <section class="w-100 mt-5">
     <div class="px-4 py-2 container-admin-products">
         <div class="d-flex justify-content-center align-items-center flex-column w-100 text-center">
-            <h1>Administracion de Productos</h1>
+            <h1>Administración de Productos</h1>
             <a class="add-product-button primary-button mt-3 p-4 w-750 btn-add-product"
                 href="index.php?section=newProduct">+
                 Agregar un
@@ -25,9 +25,9 @@ $products = get_all_products();
                                 <?php echo $product->get_name(); ?></p>
                             <p class="text-dark data-product"><span class="fw-bold">Precio:</span>
                                 $<?php echo $product->get_price(); ?></p>
-                            <p class="text-dark data-product description-product"><span class="fw-bold">Descripcion:</span>
+                            <p class="text-dark data-product description-product"><span class="fw-bold">Descripción:</span>
                                 <?php echo $product->get_description(); ?></p>
-                            <p class="text-dark data-product"><span class="fw-bold">Categoria:</span>
+                            <p class="text-dark data-product"><span class="fw-bold">Categoría:</span>
                                 <?php echo $product->get_category(); ?></p>
                             <p class="text-dark data-product detail-product"><span class="fw-bold">Detalle:</span>
                                 <?php echo $product->get_detail(); ?></p>
@@ -37,9 +37,7 @@ $products = get_all_products();
                                     href='index.php?section=editProduct&id=<?php echo $product->get_id(); ?>'>Editar</a>
                                 <button class="primary-button delete-button " id=<?php echo $product->get_id(); ?>>Eliminar</button>
                             </div>
-
                         </div>
-
                     </li>
                 <?php endforeach; ?>
             </ul>

@@ -4,11 +4,12 @@
       <div class="col-12 col-lg-6 col-xl-7">
         <div class="row justify-content-xl-center">
           <div class="col-12 col-xl-11">
-            <h2 class="mb-3">¿Quienes somos?</h2>
+            <h2 class="mb-3">¿Quiénes somos?</h2>
             <p class="lead fs-5 text-secondary mb-3">En Qubo Indumentaria, nos dedicamos a crear prendas de vestir que
               reflejan estilo, comodidad y calidad. Desde nuestros inicios, hemos estado comprometidos con la excelencia
               en diseño y fabricación, ofreciendo a nuestros clientes una experiencia única en moda.</p>
-            <p class="mb-5">Nuestra filosofía se centra en la fusión entre la creatividad y la funcionalidad. Cada una
+            <p class="mb-5 text-dark">Nuestra filosofía se centra en la fusión entre la creatividad y la funcionalidad.
+              Cada una
               de nuestras colecciones está cuidadosamente diseñada para expresar la personalidad y el estilo de quienes
               eligen vestir Qubo. Nos inspiramos en las últimas tendencias de la moda y las adaptamos para crear piezas
               versátiles que se ajusten a cualquier ocasión.</p>
@@ -42,7 +43,7 @@
                     <h2 class="h4 mb-3">Agencia Digital</h2>
                     <p class="text-secondary mb-0">Creemos en la innovación al fusionar ideas fundamentales con
                       conceptos elaborados y avanzados, buscando constantemente la sinergia entre la simplicidad y la
-                      sofisticación</p>
+                      sofisticación.</p>
                   </div>
                 </div>
               </div>

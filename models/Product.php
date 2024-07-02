@@ -32,7 +32,7 @@ class Product
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <p class="fw-bolder text-dark fs-4">' . $this->name . '</p>
-                                <span class="text-muted text-decoration-line-through">$' . ($this->price + 5) . '</span> $' . $this->price . '
+                                <span class="text-muted text-decoration-line-through">$' . ($this->price + 5.99) . '</span> $' . $this->price . '
                                 <p class="text-dark fs-5"> Categoria: ' . $this->category_name . '</p>
                             </div>
                         </div>

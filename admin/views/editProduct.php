@@ -17,7 +17,7 @@ else:
         <h1 class="mb-4 display-5">Editar un producto</h1>
         <form action='actions/editProduct.php?id=<?php echo $id ?>' method="post" enctype="multipart/form-data">
             <div class="pb-3">
-                <label for="tittle" class="h5">Título <span class="small">(mínimo 5 caracteres)</span></label>
+                <label for="tittle" class="h5">Título<span class="small">(mínimo 5 caracteres)</span></label>
                 <input type="text" id="tittle" name="tittle" class="form-control"
                     value="<?= $oldData['tittle'] ?? $product->get_name() ?>" aria-label="Título del producto"
                     aria-describedby="tittleHelp">
@@ -26,7 +26,7 @@ else:
                 <?php endif; ?>
             </div>
             <div class="pb-3">
-                <label for="price" class="h5">Precio <span class="small">(en dólares) (mínimo 1) (máximo
+                <label for="price" class="h5">Precio<span class="small">(en dólares) (mínimo 1) (máximo
                         300.000)</span></label>
                 <input type="number" id="price" name="price" class="form-control"
                     value="<?= $oldData['price'] ?? $product->get_price() ?>" aria-label="Precio del producto"
@@ -36,7 +36,7 @@ else:
                 <?php endif; ?>
             </div>
             <div class="pb-3">
-                <label for="description" class="h5">Descripción corta <span class="small">(mínimo 10
+                <label for="description" class="h5">Descripción corta<span class="small">(mínimo 10
                         caracteres)</span></label>
                 <input type="text" id="description" name="description" class="form-control"
                     value="<?= $oldData['description'] ?? $product->get_description() ?>"
@@ -51,7 +51,7 @@ else:
                     <input type="file" id="image" name="image" class="form-control">
                 </div>
                 <div class="pb-3">
-                    <label for="category" class="h5">Categoría <span class="small">(selecciona una categoría)</span></label>
+                    <label for="category" class="h5">Categoría<span class="small">(selecciona una categoría)</span></label>
                     <select name="category" id="category" class="form-control" value=<?php echo $product->get_category(); ?>>
                         <?php foreach ($categories as $category): ?>
                             <option value="<?= $category->get_id_category() ?>" <?= (isset($oldData['category']) && $oldData['category'] == $category->get_id_category()) || ($product->get_category() == $category->get_id_category()) ? 'selected' : null ?>>

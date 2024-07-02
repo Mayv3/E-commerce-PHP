@@ -3,7 +3,7 @@
         <div class="justify-content-center wrapper h-100 row no-gutters">
             <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                 <div class="contact-wrap w-100 p-md-5 p-4">
-                    <h3 class="mb-4">¡Contactanos!</h3>
+                    <h3 class="mb-4">¡Contáctanos!</h3>
                     <form method="POST" id="contactForm" name="contactForm" class="contactForm">
                         <div class="row">
                             <div class="col-md-6">
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
-                <div class="info-wrap w-100 p-md-5 p-4 text-white">
+                <div class="info-wrap w-100 p-md-5 p-4 text-white rounded">
                     <h3>Mantengámonos en contacto</h3>
                     <p class="mb-4">Estamos abiertos a cualquier sugerencia o simplemente a charlar.</p>
                     <p class="pl-3"><span>Dirección:</span> Chacabuco 4055</p>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="dbox w-100 d-flex align-items-center">
                         <div class="text pl-3">
-                            <p><span>Sitio web</span> <a class="text-white" href="#">QuboIndumentaria.com</a>
+                            <p><span>Sitio web:</span> <a class="text-white" href="#">QuboIndumentaria.com</a>
                             </p>
                         </div>
                     </div>

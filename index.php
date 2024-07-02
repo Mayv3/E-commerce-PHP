@@ -75,7 +75,7 @@ if (!isset($routes[$view])) {
         ?>
     </main>
     <footer class="d-flex justify-content-center align-items-center">
-        <p class="m-0 text-center text-white">QuboIndumentaria &copy; Todos los derechos reservados</p>
+        <p class="m-0 text-center text-white">Qubo Indumentaria &copy; Todos los derechos reservados</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

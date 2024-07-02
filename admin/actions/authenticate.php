@@ -18,4 +18,3 @@ else:
     $_SESSION['message_type'] = 'danger';
     header("Location: ../index.php?section=login");
 endif;
-

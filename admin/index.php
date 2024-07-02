@@ -73,7 +73,7 @@ endif;
                         <form action="actions/logout.php" class="m-0 p-0" method="post">
                             <button type="submit" class="btn btn-danger p-2">
                                 <span class="user-hint">(<?php echo $auth->get_session_user()->get_user_email() ?>)</span>
-                                Cerrar sesion
+                                Cerrar sesión
                             </button>
                         </form>
                     </div>
@@ -96,7 +96,7 @@ endif;
     </main>
     <footer class="d-flex justify-content-center align-items-center">
         <div class="container">
-            <p class="m-0 text-center text-white">QuboIndumentaria &copy; Todos los derechos reservados</p>
+            <p class="m-0 text-center text-white">Qubo Indumentaria &copy; Todos los derechos reservados</p>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

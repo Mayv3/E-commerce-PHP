@@ -33,7 +33,7 @@ unset($_SESSION['old-data']);
             <?php endif; ?>
         </div>
         <div class="pb-3">
-            <label for="description" class="h5">Descripción corta <span class="small">(mínimo 10
+            <label for="description" class="h5">Descripción corta<span class="small">(mínimo 10
                     caracteres)</span></label>
             <input type="text" id="description" name="description" class="form-control"
                 value="<?= $oldData['description'] ?? '' ?>" aria-label="Descripción corta del producto"
@@ -48,7 +48,7 @@ unset($_SESSION['old-data']);
                 <input type="file" id="image" name="image" class="form-control">
             </div>
             <div class="pb-3">
-                <label for="category" class="h5">Categoría <span class="small">(selecciona una categoría)</span></label>
+                <label for="category" class="h5">Categoría<span class="small">(selecciona una categoría)</span></label>
                 <select name="category" id="category" class="form-control">
                     <?php foreach ($categories as $category): ?>
                         <option value="<?= $category->get_id_category() ?>" <?= (isset($oldData['category']) && $oldData['category'] == $category->get_id_category()) ? 'selected' : null ?>>
@@ -63,7 +63,7 @@ unset($_SESSION['old-data']);
         </div>
 
         <div>
-            <label for="detail" class="h5">Detalle <span class="small">(mínimo 10 caracteres)</span></label>
+            <label for="detail" class="h5">Detalle<span class="small">(mínimo 10 caracteres)</span></label>
             <textarea id="detail" name="detail" class="form-control" aria-label="Detalle del producto"
                 aria-describedby="detailHelp"><?= $oldData['detail'] ?? '' ?></textarea>
             <?php if (isset($errors['detail'])): ?>
