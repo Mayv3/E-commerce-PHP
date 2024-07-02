@@ -13,7 +13,7 @@ if ($product == null):
     echo '<a class="btn" href="index.php">Volver a inicio</a>';
 else:
     ?>
-    <section>
+    <section class="px-5 py-5">
         <h1 class="mb-4 display-5">Editar un producto</h1>
         <form action='actions/editProduct.php?id=<?php echo $id ?>' method="post" enctype="multipart/form-data">
             <div class="pb-3">
@@ -45,7 +45,7 @@ else:
                     <p id="descriptionHelp" class="text-danger"><?= $errors['description'] ?></p>
                 <?php endif; ?>
             </div>
-            <div class="d-flex gap-4">
+            <div class="d-flex gap-4 flex-column flex-lg-row">
                 <div class="pb-3">
                     <label for="image" class="h5">Imagen</label>
                     <input type="file" id="image" name="image" class="form-control">
@@ -73,7 +73,7 @@ else:
                     <p id="detailHelp" class="text-danger"><?= $errors['detail'] ?></p>
                 <?php endif; ?>
             </div>
-            <button type="submit" class="btn btn-primary border-0 my-4">Publicar</button>
+            <button type="submit" class="btn-warning w-100 rounded border-0 my-4">Editar</button>
         </form>
     </section>
 

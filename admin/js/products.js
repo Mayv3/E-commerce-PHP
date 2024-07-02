@@ -27,7 +27,8 @@ function render_confirm_modal(id) {
   const link_confirm = document.createElement("a");
   link_confirm.href = `./actions/deleteProduct.php?id=${id}`;
   link_confirm.textContent = "Confirmar";
-  link_confirm.className = "primary-button add-product-button rounded p-2";
+  link_confirm.className =
+    "primary-button add-product-button rounded p-2 flex-grow-1";
   form.appendChild(link_confirm);
 
   const button_cancel = document.createElement("button");

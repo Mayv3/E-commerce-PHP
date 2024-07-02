@@ -1,4 +1,4 @@
-<section>
+<section class="my-4">
     <div class="container">
         <div class="justify-content-center wrapper h-100 row no-gutters">
             <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">

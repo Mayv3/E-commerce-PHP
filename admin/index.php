@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../models/Authentication.php';
-session_start();
 $routes = [
     'login' => [],
     'dashboard' => [],
@@ -73,7 +72,7 @@ $auth = new Authentication()
             </div>
         </nav>
     </header>
-    <main class="d-flex justify-content-center align-items-center flex-column mt-5">
+    <main class="d-flex justify-content-center align-items-center flex-column">
 
         <?php
         if ($message !== null): ?>

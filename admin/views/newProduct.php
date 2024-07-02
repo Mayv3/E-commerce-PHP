@@ -12,7 +12,7 @@ unset($_SESSION['old-data']);
 
 
 
-<section>
+<section class="p-4">
     <h1 class="mb-4 display-5">Publicar un nuevo producto</h1>
     <form action="actions/addProduct.php" method="post" enctype="multipart/form-data">
         <div class="pb-3">
@@ -42,7 +42,7 @@ unset($_SESSION['old-data']);
                 <p id="descriptionHelp" class="text-danger"><?= $errors['description'] ?></p>
             <?php endif; ?>
         </div>
-        <div class="d-flex gap-4">
+        <div class="d-flex gap-4 flex-column flex-lg-row">
             <div class="pb-3">
                 <label for="image" class="h5">Imagen</label>
                 <input type="file" id="image" name="image" class="form-control">
@@ -70,6 +70,6 @@ unset($_SESSION['old-data']);
                 <p id="detailHelp" class="text-danger"><?= $errors['detail'] ?></p>
             <?php endif; ?>
         </div>
-        <button type="submit" class="btn btn-primary border-0 my-4">Publicar</button>
+        <button type="submit" class="btn-success w-100 rounded border-0 my-4">Publicar</button>
     </form>
 </section>

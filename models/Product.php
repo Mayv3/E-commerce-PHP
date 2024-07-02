@@ -26,7 +26,7 @@ class Product
                 <div class="mb-5">
                     <div class="card h-100">
                         <div class="badge bg-dark text-white position-absolute">Sale</div>
-                        <img class="card-img" src="' . $this->image . '" alt="' . $this->name . '">
+                        <img class="card-img" src="img/' . $this->image . '" alt="' . $this->name . '">
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <p class="fw-bolder text-dark fs-4">' . $this->name . '</p>
