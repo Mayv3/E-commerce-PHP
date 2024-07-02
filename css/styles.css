@@ -234,3 +234,7 @@ p a:hover {
   color: red;
   font-size: 2rem;
 }
+
+.user-hint {
+  font-size: 0.75rem;
+}

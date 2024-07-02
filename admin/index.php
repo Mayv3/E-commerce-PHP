@@ -1,12 +1,11 @@
 <?php
 require_once __DIR__ . '/../models/Authentication.php';
-session_start();
 $routes = [
     'login' => [],
-    'dashboard' => [],
-    'products' => [],
-    'newProduct' => [],
-    'editProduct' => [],
+    'dashboard' => ['auth_required' => true],
+    'products' => ['auth_required' => true],
+    'newProduct' => ['auth_required' => true],
+    'editProduct' => ['auth_required' => true],
 ];
 
 $view = isset($_GET['section']) ? $_GET['section'] : 'dashboard';
@@ -20,9 +19,14 @@ $messageType = $_SESSION['message_type'] ?? null;
 unset($_SESSION['message']);
 unset($_SESSION['message_type']);
 
-$auth = new Authentication()
+$auth = new Authentication();
+$current_route = $routes[$view];
 
-    ?>
+if (isset($current_route['auth_required']) && !$auth->is_loged()):
+    header('Location: index.php?section=login');
+endif;
+
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -65,8 +69,11 @@ $auth = new Authentication()
                             <li class="nav-item"><a class="nav-link active" aria-current="page"
                                     href="index.php?section=products">Productos</a></li>
                         </ul>
-                        <form action="actions/logout.php" class="m-0 p-0" method="post"><input type="submit"
-                                class="btn btn-danger p-2" value="Cerrar sesion">
+                        <form action="actions/logout.php" class="m-0 p-0" method="post">
+                            <button type="submit" class="btn btn-danger p-2">
+                                <span class="user-hint">(<?php echo $auth->get_session_user()->get_user_email() ?>)</span>
+                                Cerrar sesion
+                            </button>
                         </form>
                     </div>
                 <?php endif; ?>

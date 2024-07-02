@@ -1,7 +1,19 @@
 <?php
-session_start();
 require_once __DIR__ . '/../../utilities/makeQuery.php';
 require_once __DIR__ . '/../../utilities/getProductById.php';
+require_once __DIR__ . '/../../models/Authentication.php';
+
+$auth = new Authentication();
+
+//this action requires authorization, 
+// so we check if the user is logged before actions
+if (!$auth->is_loged()):
+
+    $_SESSION['message'] = '401: No estas autorizado a ingresar a esta sección.';
+    $_SESSION['message_type'] = 'danger';
+    header('Location: ../index.php?section=login');
+
+endif;
 
 $id = $_GET['id']; //obtained by url
 

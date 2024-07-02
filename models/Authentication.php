@@ -1,20 +1,22 @@
 <?php
 
 require_once __DIR__ . '/../utilities/makeQuery.php';
+require_once __DIR__ . '/User.php';
+
 session_start();
 class Authentication
 {
     function verify_credentials($email, $password) //just return boolean true or false
     {
-        $query = 'SELECT * FROM users WHERE user_email = ?';
-        $user_data = make_query($query, [$email]);
+        $user = new User();
+        $user->set_by_email($email);
 
         //there is no user
-        if ($user_data == null):
+        if ($user == null):
             return false;
         endif;
 
-        $saved_pass = $user_data[0]['user_password'];
+        $saved_pass = $user->get_user_password();
 
         //pass are different
         if (!password_verify($password, $saved_pass)):
@@ -22,8 +24,22 @@ class Authentication
         endif;
 
         //sets the authenticated user in the session
-        $_SESSION['log_user'] = $user_data[0]['id_user'];
+        $_SESSION['log_user'] = $user->get_id_user();
         return true;
+    }
+
+    function get_session_user()
+    {
+        if (!$this->is_loged()):
+            return null;
+        endif;
+
+        $session_user = new User();
+
+        $session_user->set_by_id($_SESSION['log_user']);
+
+        //if there is no user this will be null
+        return $session_user;
     }
 
     function logout()
