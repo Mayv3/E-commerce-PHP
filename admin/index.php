@@ -80,7 +80,7 @@ endif;
             </div>
         </nav>
     </header>
-    <main class="d-flex justify-content-center align-items-center flex-column mt-5">
+    <main class="d-flex justify-content-center align-items-center flex-column">
 
         <?php
         if ($message !== null): ?>

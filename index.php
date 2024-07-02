@@ -19,7 +19,7 @@ if (!isset($routes[$view])) {
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Indumentaria de la mejor calidad a mejor precio. Descubre tus favoritas">
     <meta name="author" content="">
     <title>Qubo Indumentaria</title>
@@ -73,9 +73,7 @@ if (!isset($routes[$view])) {
         ?>
     </main>
     <footer class="d-flex justify-content-center align-items-center">
-        <div class="container">
-            <p class="m-0 text-center text-white">QuboIndumentaria &copy; Todos los derechos reservados</p>
-        </div>
+        <p class="m-0 text-center text-white">QuboIndumentaria &copy; Todos los derechos reservados</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
