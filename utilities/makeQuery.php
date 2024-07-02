@@ -16,9 +16,11 @@ function make_query($query, $params = null)
 
         #close the connection
         $connection = null;
-        if ($response)
+        if ($response):
             return $response;
-        return null;
+        else:
+            return null;
+        endif;
 
     } catch (Exception $e) {
         exit("Ocurrio un error conectando la base de datos: " . $e->getMessage());
