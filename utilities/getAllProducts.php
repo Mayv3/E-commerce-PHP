@@ -21,6 +21,7 @@ function get_all_products()
                     $element['id_item'],
                     $element['item_description'],
                     $element['detail_item'],
+                    $element['item_category'],
                     $element['category_name'],
                 );
 

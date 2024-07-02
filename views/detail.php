@@ -16,7 +16,7 @@ if (isset($product)):
                 <div class="fs-5 mb-5">
                     <span>$<?= $product->get_price() ?></span>
                     <br>
-                    <span>Categoria: <?= $product->get_category() ?></span>
+                    <span>Categoria: <?= $product->get_category_name() ?></span>
                 </div>
                 <p class="lead text-dark detail-product-client"><strong><?= $product->get_description() ?></strong></p>
                 <p class="lead text-dark detail-product-client"><?= $product->get_detail() ?></p>

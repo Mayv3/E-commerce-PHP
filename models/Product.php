@@ -8,7 +8,8 @@ class Product
     private $detail;
     private $description;
     private $category;
-    public function __construct($image, $name, $price, $id, $description, $detail, $category)
+    private $category_name;
+    public function __construct($image, $name, $price, $id, $description, $detail, $category, $category_name)
     {
         $this->image = $image;
         $this->name = $name;
@@ -17,6 +18,7 @@ class Product
         $this->detail = $detail;
         $this->id = $id;
         $this->category = $category;
+        $this->category_name = $category_name;
     }
 
     public function render()
@@ -31,7 +33,7 @@ class Product
                             <div class="text-center">
                                 <p class="fw-bolder text-dark fs-4">' . $this->name . '</p>
                                 <span class="text-muted text-decoration-line-through">$' . ($this->price + 5) . '</span> $' . $this->price . '
-                                <p class="text-dark fs-5"> Categoria: ' . $this->category . '</p>
+                                <p class="text-dark fs-5"> Categoria: ' . $this->category_name . '</p>
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -75,6 +77,11 @@ class Product
     public function get_category()
     {
         return $this->category;
+    }
+
+    public function get_category_name()
+    {
+        return $this->category_name;
     }
 
 
