@@ -1,6 +1,4 @@
 <?php
-require_once __DIR__ . ('/../models/Connection.php');
-
 function make_query($query, $params = null)
 {
     try {

@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/../models/Authentication.php';
+require_once __DIR__ . '/../bootstrap/autoload.php';
+
 $routes = [
     'login' => [],
     'dashboard' => ['auth_required' => true],
