@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../../utilities/makeQuery.php';
 require_once __DIR__ . '/../../bootstrap/autoload.php';
-
+session_start();
 
 $auth = new Authentication();
 

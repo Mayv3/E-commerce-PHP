@@ -27,7 +27,7 @@ else:
             </div>
             <div class="pb-3">
                 <label for="price" class="h5">Precio <span class="small">(en dólares) (mínimo 1) (máximo
-                        300.000)</span></span></label>
+                        300.000)</span></label>
                 <input type="number" id="price" name="price" class="form-control"
                     value="<?= $oldData['price'] ?? $product->get_price() ?>" aria-label="Precio del producto"
                     aria-describedby="priceHelp">
@@ -52,7 +52,7 @@ else:
                 </div>
                 <div class="pb-3">
                     <label for="category" class="h5">Categoría <span class="small">(selecciona una categoría)</span></label>
-                    <select name="category" id="category" class="form-control" value=<?php $product->get_category() ?>>
+                    <select name="category" id="category" class="form-control" value=<?php echo $product->get_category(); ?>>
                         <?php foreach ($categories as $category): ?>
                             <option value="<?= $category->get_id_category() ?>" <?= (isset($oldData['category']) && $oldData['category'] == $category->get_id_category()) || ($product->get_category() == $category->get_id_category()) ? 'selected' : null ?>>
                                 <?php echo $category->get_category_name() ?>

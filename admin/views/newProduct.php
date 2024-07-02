@@ -25,7 +25,7 @@ unset($_SESSION['old-data']);
         </div>
         <div class="pb-3">
             <label for="price" class="h5">Precio <span class="small">(en dólares) (mínimo 1) (máximo
-                    300.000)</span></span></label>
+                    300.000)</span></label>
             <input type="number" id="price" name="price" class="form-control" value="<?= $oldData['price'] ?? '' ?>"
                 aria-label="Precio del producto" aria-describedby="priceHelp">
             <?php if (isset($errors['price'])): ?>

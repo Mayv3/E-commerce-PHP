@@ -43,18 +43,6 @@ $products = get_all_products();
                     </li>
                 <?php endforeach; ?>
             </ul>
-            <style>
-                @media (min-width: 768px) {
-                    ul.p-0 {
-                        grid-template-columns: repeat(2, 1fr);
-                    }
-                }
-
-                @media (min-width: 1024px) {
-                    ul.p-0 {
-                        grid-template-columns: repeat(4, 1fr);
-                    }
-                }
-            </style>
         <?php endif; ?>
+    </div>
 </section>
