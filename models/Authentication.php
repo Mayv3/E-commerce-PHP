@@ -22,7 +22,17 @@ class Authentication
         endif;
 
         //sets the authenticated user in the session
-        $_SESSION['user_id'] = $user_data['id'];
+        $_SESSION['log_user'] = $user_data[0]['id_user'];
         return true;
+    }
+
+    function logout()
+    {
+        unset($_SESSION['log_user']);
+    }
+
+    function is_loged(): bool
+    {
+        return isset($_SESSION['log_user']);
     }
 }

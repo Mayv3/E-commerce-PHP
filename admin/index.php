@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../models/Authentication.php';
 session_start();
 $routes = [
     'login' => [],
@@ -18,7 +19,10 @@ $message = $_SESSION['message'] ?? null;
 $messageType = $_SESSION['message_type'] ?? null;
 unset($_SESSION['message']);
 unset($_SESSION['message_type']);
-?>
+
+$auth = new Authentication()
+
+    ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -45,22 +49,27 @@ unset($_SESSION['message_type']);
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-4 px-lg-5">
-                <img class="img-fluid logo-cubo" src="../img/logo-cubo.png" alt="Qubo indumentaria icono">
-                <a class="navbar-brand " href="index.php?section=dashboard">Qubo Indumentaria</a>
-                <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span
-                        class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"
-                                href="index.php?section=dashboard">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"
-                                href="index.php?section=products">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page"
-                                href="index.php?section=login">Iniciar sesion</a></li>
-                    </ul>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid logo-cubo" src="../img/logo-cubo.png" alt="Qubo indumentaria icono">
+                    <a class="navbar-brand " href="index.php?section=dashboard">Qubo Indumentaria</a>
                 </div>
+                <?php if ($auth->is_loged()): ?>
+                    <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="index.php?section=dashboard">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="index.php?section=products">Productos</a></li>
+                        </ul>
+                        <form action="actions/logout.php" class="m-0 p-0" method="post"><input type="submit"
+                                class="btn btn-danger p-2" value="Cerrar sesion">
+                        </form>
+                    </div>
+                <?php endif; ?>
             </div>
         </nav>
     </header>
