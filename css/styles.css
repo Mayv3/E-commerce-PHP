@@ -159,10 +159,22 @@ p a:hover {
 
 .edit-button {
   background-color: orange;
+  width: 48%;
 }
 
 .delete-button {
   background-color: red;
+  width: 48%;
+}
+.detail-product,
+.description-product {
+  word-wrap: break-word;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limiting to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* modal styles */
 
