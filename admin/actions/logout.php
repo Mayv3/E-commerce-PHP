@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__ . '/../../models/Authentication.php';
 
 $auth = new Authentication();
