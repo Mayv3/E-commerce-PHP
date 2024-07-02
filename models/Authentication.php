@@ -6,6 +6,7 @@ require_once __DIR__ . '/User.php';
 session_start();
 class Authentication
 {
+    private $session_user;
     function verify_credentials($email, $password) //just return boolean true or false
     {
         $user = new User();
@@ -34,12 +35,13 @@ class Authentication
             return null;
         endif;
 
-        $session_user = new User();
+        if (!$this->session_user):
+            $this->session_user = new User();
+            //if there is no user this will be null, anyway should happend if there is a login action before
+            $this->session_user->set_by_id($_SESSION['log_user']);
+        endif;
 
-        $session_user->set_by_id($_SESSION['log_user']);
-
-        //if there is no user this will be null
-        return $session_user;
+        return $this->session_user;
     }
 
     function logout()

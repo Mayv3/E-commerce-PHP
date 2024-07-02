@@ -3,16 +3,16 @@ require_once '../utilities/getAllProducts.php';
 $products = get_all_products();
 ?>
 <section class="w-100 mt-5">
-    <?php if (count($products) > 0): ?>
-        <div class="px-4 py-2 container-admin-products">
-            <div class="d-flex justify-content-center align-items-center flex-column w-100 text-center">
-                <h1>Administracion de Productos</h1>
-                <a class="add-product-button primary-button mt-3 p-4 w-750 btn-add-product"
-                    href="index.php?section=newProduct">+
-                    Agregar un
-                    producto
-                    nuevo</a>
-            </div>
+    <div class="px-4 py-2 container-admin-products">
+        <div class="d-flex justify-content-center align-items-center flex-column w-100 text-center">
+            <h1>Administracion de Productos</h1>
+            <a class="add-product-button primary-button mt-3 p-4 w-750 btn-add-product"
+                href="index.php?section=newProduct">+
+                Agregar un
+                producto
+                nuevo</a>
+        </div>
+        <?php if (count($products) > 0): ?>
             <ul class="p-0 row gap-3 justify-content-center">
                 <?php foreach ($products as $product): ?>
                     <li class="my-5 bg-white rounded-3 shadow-lg col-sm-12 col-md-5 col-lg-3 p-0">
@@ -56,9 +56,5 @@ $products = get_all_products();
                     }
                 }
             </style>
-
-
-        <?php else: ?>
-            <i class="text-dark">Agrega un producto para comenzar ;)</i>
         <?php endif; ?>
 </section>
