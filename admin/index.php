@@ -85,7 +85,7 @@ endif;
 
         <?php
         if ($message !== null): ?>
-            <div class="alert  alert-<?= $messageType ?>"><?= $message ?></div>
+            <div class="alert mt-5 alert-<?= $messageType ?>"><?= $message ?></div>
         <?php endif;
         ?>
 
