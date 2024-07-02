@@ -54,7 +54,7 @@ else:
                     <label for="category" class="h5">Categoría <span class="small">(selecciona una categoría)</span></label>
                     <select name="category" id="category" class="form-control" value=<?php $product->get_category() ?>>
                         <?php foreach ($categories as $category): ?>
-                            <option value="<?= $category->get_id_category() ?>" <?= (isset($oldData['category']) && $oldData['category'] == $category->get_id_category()) ? 'selected' : null ?>>
+                            <option value="<?= $category->get_id_category() ?>" <?= (isset($oldData['category']) && $oldData['category'] == $category->get_id_category()) || ($product->get_category() == $category->get_id_category()) ? 'selected' : null ?>>
                                 <?php echo $category->get_category_name() ?>
                             </option>
                         <?php endforeach; ?>

@@ -16,8 +16,8 @@ $products = get_all_products();
             <ul class="p-0 row gap-3 justify-content-center">
                 <?php foreach ($products as $product): ?>
                     <li class="my-5 bg-white rounded-3 shadow-lg col-sm-12 col-md-5 col-lg-3 p-0">
-                        <img class="w-100 mx-auto d-block rounded-3" src="../img/<?php echo $product->get_image(); ?>"
-                            alt="<?php echo $product->get_name(); ?>">
+                        <img class="w-100 mx-auto d-block rounded-3 img-product-admin"
+                            src="../img/<?php echo $product->get_image(); ?>" alt="<?php echo $product->get_name(); ?>">
                         <div class="p-4">
                             <p class="text-dark data-product"><span class="fw-bold">id:</span> <?php echo $product->get_id(); ?>
                             </p>

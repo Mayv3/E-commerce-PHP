@@ -176,6 +176,10 @@ p a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.img-product-admin {
+  max-height: 300px;
+  object-fit: cover;
+}
 /* modal styles */
 
 .modal-container {
