@@ -1,6 +1,5 @@
 <?php
-require_once (__DIR__ . '/makeQuery.php');
-require_once (__DIR__ . '/../models/Category.php');
+require_once __DIR__ . '/makeQuery.php';
 function get_all_categories()
 {
     $query = "SELECT id_category, category_name FROM categories";

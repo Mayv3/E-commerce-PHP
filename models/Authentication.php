@@ -12,8 +12,9 @@ class Authentication
         $user = new User();
         $user->set_by_email($email);
 
-        //there is no user
-        if ($user == null):
+        //there is no user if its equal to an empty state
+        //note for us : whe should try to improve this 
+        if ($user == new User()):
             return false;
         endif;
 

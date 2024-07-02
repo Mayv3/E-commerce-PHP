@@ -2,7 +2,6 @@
 require_once __DIR__ . '/../../models/Authentication.php';
 
 
-
 $user_email = (new Authentication)->get_session_user();
 ?>
 <section class="container text-center">

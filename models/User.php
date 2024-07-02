@@ -15,13 +15,13 @@ class User
     {
 
         $query = "select * from users where user_email = ?";
-        $user = make_query($query, [$email_user])[0];
+        $user = make_query($query, [$email_user]);
 
         if ($user != null):
-            $this->id_user = $user['id_user'];
-            $this->user_email = $user['user_email'];
-            $this->user_role = $user['user_role'];
-            $this->user_password = $user['user_password'];
+            $this->id_user = $user[0]['id_user'];
+            $this->user_email = $user[0]['user_email'];
+            $this->user_role = $user[0]['user_role'];
+            $this->user_password = $user[0]['user_password'];
         endif;
 
     }
@@ -29,13 +29,13 @@ class User
     {
 
         $query = "select * from users where id_user = ?";
-        $user = make_query($query, [$id_user])[0];
+        $user = make_query($query, [$id_user]);
 
         if ($user != null):
-            $this->id_user = $user['id_user'];
-            $this->user_email = $user['user_email'];
-            $this->user_role = $user['user_role'];
-            $this->user_password = $user['user_password'];
+            $this->id_user = $user[0]['id_user'];
+            $this->user_email = $user[0]['user_email'];
+            $this->user_role = $user[0]['user_role'];
+            $this->user_password = $user[0]['user_password'];
         endif;
 
     }

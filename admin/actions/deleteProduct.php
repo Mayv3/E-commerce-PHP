@@ -1,7 +1,8 @@
 <?php
 require_once __DIR__ . '/../../utilities/makeQuery.php';
 require_once __DIR__ . '/../../utilities/getProductById.php';
-require_once __DIR__ . '/../../models/Authentication.php';
+require_once __DIR__ . '/../../bootstrap/autoload.php';
+
 
 $auth = new Authentication();
 

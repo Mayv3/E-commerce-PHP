@@ -1,6 +1,5 @@
 <?php
-require_once (__DIR__ . '/../models/Product.php');
-require_once (__DIR__ . '/makeQuery.php');
+require_once __DIR__ . '/makeQuery.php';
 
 function get_all_products()
 {
