@@ -10,6 +10,6 @@ $auth->logout();
 $_SESSION['$message'] = 'Gracias! Vuelva prontos';
 $_SESSION['$message_type'] = 'success';
 
-header("Location: ../index.php?section=login");
+header("Location: /e-commerce-PHP/index.php?section=login");
 
 

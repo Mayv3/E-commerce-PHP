@@ -10,10 +10,8 @@ class User
     protected int $user_role;
     protected string $user_password;
 
-
     public function set_by_email($email_user)
     {
-
         $query = "select * from users where user_email = ?";
         $user = make_query($query, [$email_user]);
 
@@ -23,11 +21,9 @@ class User
             $this->user_role = $user[0]['user_role'];
             $this->user_password = $user[0]['user_password'];
         endif;
-
     }
     public function set_by_id($id_user)
     {
-
         $query = "select * from users where id_user = ?";
         $user = make_query($query, [$id_user]);
 
@@ -37,9 +33,7 @@ class User
             $this->user_role = $user[0]['user_role'];
             $this->user_password = $user[0]['user_password'];
         endif;
-
     }
-
     public function get_id_user()
     {
         return $this->id_user;

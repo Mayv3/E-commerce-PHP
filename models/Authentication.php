@@ -54,3 +54,4 @@ class Authentication
         return isset($_SESSION['log_user']);
     }
 }
+

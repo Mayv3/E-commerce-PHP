@@ -1,5 +1,6 @@
 <?php
 require_once 'bootstrap/autoload.php';
+session_start();
 
 $routes = [
     'home' => [],
@@ -7,6 +8,8 @@ $routes = [
     'detail' => [],
     'about' => [],
     'contact' => [],
+    'register' => [],
+    'login' => [],
 ];
 
 $view = isset($_GET['section']) ? $_GET['section'] : 'home';
@@ -14,7 +17,21 @@ $view = isset($_GET['section']) ? $_GET['section'] : 'home';
 if (!isset($routes[$view])) {
     $view = '404';
 }
+
+$message = $_SESSION['message'] ?? null;
+$messageType = $_SESSION['message_type'] ?? null;
+unset($_SESSION['message']);
+unset($_SESSION['message_type']);
+
+
+$auth = new Authentication();
+$current_route = $routes[$view];
+
+if (isset($current_route['auth_required']) && !$auth->is_loged()):
+    header('Location: index.php?section=login');
+endif;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -58,18 +75,40 @@ if (!isset($routes[$view])) {
                         <li class="nav-item"><a class="nav-link active" aria-current="page"
                                 href="index.php?section=contact">Contacto</a></li>
                     </ul>
-                    <div class="d-flex">
+                    <div class="d-flex gap-2">
                         <button class="btn carrito text-white" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Carrito
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
-                    </div>
+                        <?php if ($auth->is_loged()): ?>
+                            <form action="admin/actions/logout.php" class="m-0 p-0" method="post">
+                                <button type="submit" class="btn btn-danger p-2">
+                                    <span
+                                        class="user-hint">(<?php echo $auth->get_session_user()->get_user_email() ?>)</span>
+                                    Cerrar sesión
+                                </button>
+                            </form>
+                        </div>
+                        <?php
+                        else:
+                            ?>
+                        <a class="" href="index.php?section=login">Iniciar Sesión</a>
+                    <?php endif; ?>
+
                 </div>
+            </div>
             </div>
         </nav>
     </header>
-    <main class="d-flex justify-content-center align-items-center">
+    <main class="d-flex justify-content-center align-items-center flex-column">
+
+        <?php
+        if ($message !== null): ?>
+            <div class="alert mt-5 alert-<?= $messageType ?>"><?= $message ?></div>
+        <?php endif;
+        ?>
+
         <?php
         require "views/$view.php";
         ?>
