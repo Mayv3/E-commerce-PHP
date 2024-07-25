@@ -75,6 +75,14 @@ svg {
   padding: 0.7rem 4rem;
   color: white;
 }
+.btn.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 0.25rem;
+}
+.btn.btn-primary::hover {
+  background-color: #0569d4;
+}
 .carrito {
   color: black;
   background-color: white;
