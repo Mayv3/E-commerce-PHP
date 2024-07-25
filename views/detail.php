@@ -21,12 +21,17 @@ if (isset($product)):
                 <p class="lead text-dark detail-product-client"><strong><?= $product->get_description() ?></strong></p>
                 <p class="lead text-dark detail-product-client"><?= $product->get_detail() ?></p>
                 <div class="d-flex">
-                    <label for="inputQuantity" class="visually-hidden">Cantidad</label>
-                    <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" />
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                        Comprar
-                    </button>
+                    <form action="admin/actions/addToCart.php" method="post">
+                        <input type="hidden" name="product_id" value="<?= $product->get_id() ?>">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <input class="form-control text-center me-3" type="number" name="quantity" value="1" min="1"
+                                required>
+                            <button class="btn btn-outline-dark flex-shrink-0" type="submit">
+                                <i class="bi-cart-fill me-1"></i>
+                                Añadir al carrito
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

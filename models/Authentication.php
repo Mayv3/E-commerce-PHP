@@ -47,6 +47,7 @@ class Authentication
     function logout()
     {
         unset($_SESSION['log_user']);
+        unset($_SESSION['cart']);
     }
 
     function is_loged(): bool

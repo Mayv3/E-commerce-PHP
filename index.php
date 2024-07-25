@@ -11,6 +11,8 @@ $routes = [
     'register' => [],
     'login' => [],
     'profile-user' => [],
+    'cart' => [],
+
 ];
 
 $view = isset($_GET['section']) ? $_GET['section'] : 'home';
@@ -91,6 +93,7 @@ endif;
                                         <img class="logo-cubo m-0" src="img/logout.png" alt="">
                                     </button>
                                 </form>
+                                <a href="index.php?section=cart">Carrito</a>
                             </div>
                         </div>
                         <?php
