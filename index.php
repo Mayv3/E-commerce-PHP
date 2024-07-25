@@ -10,6 +10,7 @@ $routes = [
     'contact' => [],
     'register' => [],
     'login' => [],
+    'profile-user' => [],
 ];
 
 $view = isset($_GET['section']) ? $_GET['section'] : 'home';
@@ -77,23 +78,25 @@ endif;
                     </ul>
                     <div class="d-flex gap-2">
                         <?php if ($auth->is_loged()): ?>
-                            <form action="admin/actions/logout.php" class="m-0 p-0" method="post">
-                                <button type="submit" class="btn btn-danger p-2">
-                                    Cerrar sesión
-                                </button>
-                            </form>
-                            <form action="admin/actions/profile.php" class="m-0 p-0" method="post">
-                                <button type="submit"
-                                    class="btn btn-danger p-2 d-flex justify-content-center align-items-center ">
-                                    <?php echo $auth->get_session_user()->get_user_email() ?>
+                            <div class="d-flex justify-content-center align-items-center gap-3">
+
+                                <span class="text-white"><?php echo $auth->get_session_user()->get_user_email() ?></span>
+                                <a class="profile d-flex justify-content-center align-items-center rounded"
+                                    href="index.php?section=profile-user">
                                     <img class="logo-cubo m-0" src="img/profile-logo.png" alt="Profile Logo">
-                                </button>
-                            </form>
+                                </a>
+                                <form action="admin/actions/logout.php" class="m-0 p-0" method="post">
+                                    <button type="submit"
+                                        class="profile bg-danger d-flex justify-content-center align-items-center rounded border-0">
+                                        <img class="logo-cubo m-0" src="img/logout.png" alt="">
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                         <?php
                         else:
                             ?>
-                        <a class="" href="index.php?section=login">Iniciar Sesión</a>
+                        <a class="btn" href="index.php?section=login">Iniciar Sesión</a>
                     <?php endif; ?>
 
                 </div>

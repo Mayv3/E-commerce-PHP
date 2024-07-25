@@ -221,6 +221,12 @@ p a:hover {
   padding: 0.5rem;
   border: 1px solid #000;
 }
+.profile {
+  background-color: yellow;
+  width: 3rem !important;
+  height: auto !important;
+}
+
 @media (min-width: 768px) {
   .login-container {
     width: 40%;
