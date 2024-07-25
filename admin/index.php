@@ -7,6 +7,8 @@ $routes = [
     'products' => ['auth_required' => true],
     'newProduct' => ['auth_required' => true],
     'editProduct' => ['auth_required' => true],
+    'users' => ['auth_required' => true],
+
 ];
 
 $view = isset($_GET['section']) ? $_GET['section'] : 'dashboard';
@@ -69,6 +71,8 @@ endif;
                                     href="index.php?section=dashboard">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link active" aria-current="page"
                                     href="index.php?section=products">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="index.php?section=users">Usuarios</a></li>
                         </ul>
                         <form action="actions/logout.php" class="m-0 p-0" method="post">
                             <button type="submit" class="btn btn-danger p-2">
