@@ -76,17 +76,17 @@ endif;
                                 href="index.php?section=contact">Contacto</a></li>
                     </ul>
                     <div class="d-flex gap-2">
-                        <button class="btn carrito text-white" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Carrito
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
                         <?php if ($auth->is_loged()): ?>
                             <form action="admin/actions/logout.php" class="m-0 p-0" method="post">
                                 <button type="submit" class="btn btn-danger p-2">
-                                    <span
-                                        class="user-hint">(<?php echo $auth->get_session_user()->get_user_email() ?>)</span>
                                     Cerrar sesión
+                                </button>
+                            </form>
+                            <form action="admin/actions/profile.php" class="m-0 p-0" method="post">
+                                <button type="submit"
+                                    class="btn btn-danger p-2 d-flex justify-content-center align-items-center ">
+                                    <?php echo $auth->get_session_user()->get_user_email() ?>
+                                    <img class="logo-cubo m-0" src="img/profile-logo.png" alt="Profile Logo">
                                 </button>
                             </form>
                         </div>

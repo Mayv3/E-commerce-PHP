@@ -78,6 +78,7 @@ svg {
 .carrito {
   color: black;
   background-color: white;
+  font-size: 1rem;
 }
 .carrito:hover {
   background-color: var(--bg-background-secondary);
