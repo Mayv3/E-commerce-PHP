@@ -234,7 +234,9 @@ p a:hover {
   width: 3rem !important;
   height: auto !important;
 }
-
+.cart-image {
+  width: 50px !important;
+}
 @media (min-width: 768px) {
   .login-container {
     width: 40%;
