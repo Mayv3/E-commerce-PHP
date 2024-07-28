@@ -20,12 +20,12 @@ $users = make_query($query);
         </thead>
         <tbody>
             <?php foreach ($users as $user): ?>
-                <tr>
+                <tr class="align-middle">
                     <td><?php echo htmlspecialchars($user['id_user']); ?></td>
                     <td><?php echo htmlspecialchars($user['user_email']); ?></td>
                     <td><?php echo htmlspecialchars($user['rolename']); ?></td>
                     <td>
-                        <button class="btn btn-primary btn-sm">Ver Compras</button>
+                        <button class="btn btn-primary border-0">Ver Compras</button>
                     </td>
                 </tr>
             <?php endforeach; ?>
