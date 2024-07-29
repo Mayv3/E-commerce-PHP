@@ -25,7 +25,8 @@ $users = make_query($query);
                     <td><?php echo htmlspecialchars($user['user_email']); ?></td>
                     <td><?php echo htmlspecialchars($user['rolename']); ?></td>
                     <td>
-                        <button class="btn btn-primary border-0">Ver Compras</button>
+                        <a href="index.php?section=userPurchases&id_user=<?php echo $user['id_user'] ?>"
+                            class="btn px-2 py-1 border-0">Ver Compras</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -21,7 +21,7 @@ if (isset($product)):
                 <p class="lead text-dark detail-product-client"><strong><?= $product->get_description() ?></strong></p>
                 <p class="lead text-dark detail-product-client"><?= $product->get_detail() ?></p>
                 <div class="d-flex">
-                    <form action="admin/actions/addToCart.php" method="post">
+                    <form action="actions/addToCart.php" method="post">
                         <input type="hidden" name="product_id" value="<?= $product->get_id() ?>">
                         <div class="d-flex justify-content-center align-items-center">
                             <input class="form-control text-center me-3" type="number" name="quantity" value="1" min="1"

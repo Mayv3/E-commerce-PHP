@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/../../E-commerce-PHP/bootstrap/autoload.php';
-require_once __DIR__ . '/../../E-commerce-PHP/utilities/makeQuery.php';
-require_once __DIR__ . '/../../E-commerce-PHP/utilities/userExistence.php';
+require_once __DIR__ . '/../bootstrap/autoload.php';
+require_once __DIR__ . '/makeQuery.php';
+require_once __DIR__ . '/userExistence.php';
 session_start();
 
 $email = $_POST['email'];

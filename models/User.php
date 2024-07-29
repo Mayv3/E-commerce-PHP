@@ -50,4 +50,12 @@ class User
     {
         return $this->user_password;
     }
+
+    public function get_user_purchases()
+    {
+        $query = "SELECT * FROM purchase WHERE id_user = ?"; //getting user purchases
+        $params = [$this->id_user];
+        $purchases = make_query($query, $params);
+        return $purchases ?? null;
+    }
 }

@@ -12,7 +12,7 @@ $routes = [
     'login' => [],
     'profile-user' => [],
     'cart' => [],
-
+    'checkout' => [],
 ];
 
 $view = isset($_GET['section']) ? $_GET['section'] : 'home';
