@@ -33,7 +33,8 @@ $purchases = $user->get_user_purchases()
                                 <td class="align-middle"><?php echo $purchase_id; ?></td>
                                 <td class="align-middle">$<?php echo $total_purchase; ?></td>
                                 <td class="align-middle"><?php echo $date_purchase; ?></td>
-                                <td class="align-middle"><a href="detalle_compra.php?id=<?php echo $purchase_id; ?>"
+                                <td class="align-middle"><a
+                                        href="index.php?section=detalleCompra&id_purchase=<?php echo $purchase_id; ?>"
                                         class="btn px-2 py-2">Detalle</a></td>
                             </tr>
                             <?php

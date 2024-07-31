@@ -21,7 +21,7 @@ if ($auth_result == true):
     if ($rol == '1') {
         header("Location: ../index.php?section=dashboard");
     } else {
-        header("Location: /e-commerce-PHP/index.php?section=home");
+        header("Location: ../../index.php?section=home");
     }
 
 else:

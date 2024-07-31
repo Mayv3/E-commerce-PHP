@@ -58,11 +58,4 @@ class User
         $purchases = make_query($query, $params);
         return $purchases ?? null;
     }
-    public function get_purchase_items($id_purchase)
-    {
-        $query = "SELECT * FROM purchase_item WHERE id_purchase = ?";
-        $params = [$id_purchase];
-        $items = make_query($query, $params);
-        return $items ?? null;
-    }
 }

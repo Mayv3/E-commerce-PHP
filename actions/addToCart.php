@@ -2,6 +2,14 @@
 require_once __DIR__ . '/../bootstrap/autoload.php';
 require_once __DIR__ . '/../utilities/getProductById.php';
 
+//before perform any actions we check if the user is logged
+session_start();
+$auth = new Authentication();
+if (!$auth->is_loged()) {
+    header('Location: ../index.php?section=login');
+    exit;
+}
+
 $product_id = $_POST['product_id'];
 $product_quantity = $_POST['quantity'];
 

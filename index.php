@@ -10,9 +10,10 @@ $routes = [
     'contact' => [],
     'register' => [],
     'login' => [],
-    'profile-user' => [],
-    'cart' => [],
-    'checkout' => [],
+    'profile-user' => ['auth_required' => true],
+    'cart' => ['auth_required' => true],
+    'checkout' => ['auth_required' => true],
+    'detalleCompra' => ['auth_required' => true],
 ];
 
 $view = isset($_GET['section']) ? $_GET['section'] : 'home';
@@ -87,7 +88,7 @@ endif;
                                     href="index.php?section=profile-user">
                                     <img class="logo-cubo m-0" src="img/profile-logo.png" alt="Profile Logo">
                                 </a>
-                                <form action="admin/actions/logout.php" class="m-0 p-0" method="post">
+                                <form action="actions/logout.php" class="m-0 p-0" method="post">
                                     <button type="submit"
                                         class="profile bg-danger d-flex justify-content-center align-items-center rounded border-0">
                                         <img class="logo-cubo m-0" src="img/logout.png" alt="">
