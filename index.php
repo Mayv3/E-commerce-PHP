@@ -69,7 +69,7 @@ endif;
                     aria-expanded="false" aria-label="Toggle navigation"><span
                         class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link active" aria-current="page"
                                 href="index.php?section=home">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page"
@@ -79,22 +79,25 @@ endif;
                         <li class="nav-item"><a class="nav-link active" aria-current="page"
                                 href="index.php?section=contact">Contacto</a></li>
                     </ul>
-                    <div class="d-flex gap-2">
+                    <div class="d-flex gap-2 justify-content-center flex-column flex-md-row">
                         <?php if ($auth->is_loged()): ?>
-                            <div class="d-flex justify-content-center align-items-center gap-3">
-
+                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
                                 <span class="text-white"><?php echo $auth->get_session_user()->get_user_email() ?></span>
-                                <a class="profile d-flex justify-content-center align-items-center rounded"
-                                    href="index.php?section=profile-user">
-                                    <img class="logo-cubo m-0" src="img/profile-logo.png" alt="Profile Logo">
-                                </a>
-                                <form action="actions/logout.php" class="m-0 p-0" method="post">
-                                    <button type="submit"
-                                        class="profile bg-danger d-flex justify-content-center align-items-center rounded border-0">
-                                        <img class="logo-cubo m-0" src="img/logout.png" alt="">
-                                    </button>
-                                </form>
-                                <a href="index.php?section=cart">Carrito</a>
+                                <div class="d-flex flex-md-row justify-content-center">
+                                    <a href="index.php?section=cart" class="cart-icon mx-3">
+                                        <img class="cart-icon" src="./img/cart-icon.png" alt="carrito de compras">
+                                    </a>
+                                    <a class="profile d-flex justify-content-center align-items-center rounded mx-3"
+                                        href="index.php?section=profile-user">
+                                        <img class="logo-cubo m-0" src="img/profile-logo.png" alt="Profile Logo">
+                                    </a>
+                                    <form action="actions/logout.php" class="m-0 p-0" method="post">
+                                        <button type="submit"
+                                            class="profile m-0 bg-transparent d-flex justify-content-center align-items-center rounded border-0 mx-3">
+                                            <img class="logo-cubo m-0" src="img/logout.png" alt="">
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                         <?php

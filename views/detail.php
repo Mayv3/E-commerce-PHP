@@ -25,7 +25,7 @@ if (isset($product)):
                         <input type="hidden" name="product_id" value="<?= $product->get_id() ?>">
                         <div class="d-flex justify-content-center align-items-center">
                             <input class="form-control text-center me-3" type="number" name="quantity" value="1" min="1"
-                                required>
+                                max="5" required>
                             <button class="btn btn-outline-dark flex-shrink-0" type="submit">
                                 <i class="bi-cart-fill me-1"></i>
                                 Añadir al carrito

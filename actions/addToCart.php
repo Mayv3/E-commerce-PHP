@@ -29,6 +29,8 @@ if (isset($_SESSION['cart'])) {
             'quantity' => $product_quantity,
         ];
     }
+    $_SESSION['message'] = 'Producto agregado al carrito';
+    $_SESSION['message_type'] = 'success';
 } else {
     $_SESSION['cart'] = [
         [

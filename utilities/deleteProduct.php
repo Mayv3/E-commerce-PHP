@@ -12,6 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['product_id'])) {
                 } else {
                     unset($_SESSION['cart'][$key]);
                 }
+                $_SESSION['message'] = 'Producto eliminado';
+                $_SESSION['message_type'] = 'danger';
                 break;
             }
         }

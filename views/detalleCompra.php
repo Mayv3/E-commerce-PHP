@@ -10,36 +10,20 @@ foreach ($purchase_items as $item) {
 
 <div class="container mt-4">
     <h1 class="mb-4">Detalle de compra <?= htmlspecialchars($id_purchase) ?></h1>
-    <table class="table table-striped table-bordered">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre Art.</th>
-                <th>Categoría</th>
-                <th>Descripción</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>Subtotal</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($purchase_items as $item): ?>
-                <tr>
-                    <td><?= $item['id_item'] ?></td>
-                    <td><?= $item['item_name'] ?></td>
-                    <td><?= $item['category_name'] ?></td>
-                    <td><?= $item['item_description'] ?></td>
-                    <td>$<?= number_format($item['item_price'], 2) ?></td>
-                    <td><?= $item['item_quantity'] ?></td>
-                    <td>$<?= number_format($item['item_quantity'] * $item['item_price'], 2) ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="6" class="text-end"><strong>TOTAL:</strong></td>
-                <td>$<?= number_format($total, 2) ?></td>
-            </tr>
-        </tfoot>
-    </table>
+    <ul class="list-group my-4">
+        <?php foreach ($purchase_items as $item): ?>
+            <li class="list-group-item">
+                <div><strong>ID:</strong> <?= htmlspecialchars($item['id_item']) ?></div>
+                <div><strong>Nombre:</strong> <?= htmlspecialchars($item['item_name']) ?></div>
+                <div><strong>Categoria:</strong> <?= htmlspecialchars($item['category_name']) ?></div>
+                <div><strong>Descripción:</strong> <?= htmlspecialchars($item['item_description']) ?></div>
+                <div><strong>Precio:</strong> $<?= number_format($item['item_price'], 2) ?></div>
+                <div><strong>Cantidad:</strong> <?= htmlspecialchars($item['item_quantity']) ?></div>
+                <div><strong>Subtotal:</strong> $<?= number_format($item['item_quantity'] * $item['item_price'], 2) ?></div>
+            </li>
+        <?php endforeach; ?>
+        <li class="list-group-item">
+            <strong>TOTAL:</strong> $<?= number_format($total, 2) ?>
+        </li>
+    </ul>
 </div>
