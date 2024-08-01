@@ -229,15 +229,43 @@ p a:hover {
   border: 1px solid #000;
 }
 .profile {
-  background-color: yellow;
   width: 3rem !important;
   height: auto !important;
 }
 .cart-image {
   width: 50px !important;
 }
+.cart-icon {
+  width: 40px;
+  height: 40px;
+}
+.btn-delete {
+  background-color: red;
+  color: white;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.text-cart {
+  width: 100% !important;
+}
+.price-cart {
+  min-width: 3rem;
+  text-align: center;
+}
+.ul-cart {
+  overflow-y: auto;
+  max-height: 400px;
+  scrollbar-width: thin;
+}
+.users {
+  width: 100%;
+}
 @media (min-width: 768px) {
   .login-container {
     width: 40%;
+  }
+  .users {
+    width: 75%;
   }
 }

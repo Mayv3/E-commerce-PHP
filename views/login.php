@@ -7,5 +7,5 @@
         <input type="password" placeholder="Clave" id="password" name="password" class="input-login">
         <input type="submit" value="iniciar sesión" class="btn btn-primary border-0 mt-4 p-4">
     </form>
-    <a href="index.php?section=register" class="text-white mt-4">¿No tenes una cuenta? Registrate</a>
+    <a href="index.php?section=register" class="text-white mt-4 text-center">¿No tenes una cuenta? Registrate</a>
 </section>
