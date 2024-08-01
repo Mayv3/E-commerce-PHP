@@ -25,7 +25,7 @@ unset($_SESSION['message_type']);
 $auth = new Authentication();
 $current_route = $routes[$view];
 
-if (isset($current_route['auth_required']) && !$auth->is_loged()):
+if (isset($current_route['auth_required']) && !$auth->is_loged() || !$auth->is_admin() && isset($current_route['auth_required'])):
     header('Location: index.php?section=login');
 endif;
 

@@ -44,6 +44,13 @@ class Authentication
         return $this->session_user;
     }
 
+    function is_admin()
+    {
+        $user = $this->get_session_user();
+        $role = $user && $user->get_user_role();
+        return $role == 1 ? true : false;
+    }
+
     function logout()
     {
         unset($_SESSION['log_user']);
