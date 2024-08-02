@@ -47,7 +47,8 @@ class Authentication
     function is_admin()
     {
         $user = $this->get_session_user();
-        $role = $user && $user->get_user_role();
+        if ($user)
+            $role = $user->get_user_role();
         return $role == 1 ? true : false;
     }
 
