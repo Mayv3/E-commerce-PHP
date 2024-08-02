@@ -10,6 +10,7 @@ $routes = [
     'editProduct' => ['auth_required' => true],
     'users' => ['auth_required' => true],
     'userPurchases' => ['auth_required' => true],
+    'detailPurchase' => ['auth_required' => true],
 ];
 $view = isset($_GET['section']) ? $_GET['section'] : 'dashboard';
 

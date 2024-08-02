@@ -3,7 +3,7 @@
     <h1>Registrarse</h1>
     <form method="post" action="utilities/userRegister.php" class="d-flex flex-column w-100">
         <label for="email" class="label-login mb-2">Correo electrónico</label>
-        <input type="email" placeholder="correo electrónico" id="email" name="email" class="input-login">
+        <input type="email" placeholder="Correo electrónico" id="email" name="email" class="input-login">
         <label for="password" class="label-login mb-2 mt-2">Contraseña</label>
         <input type="password" placeholder="Clave" id="password" name="password" class="input-login">
         <label for="confirm_password" class="label-login mb-2 mt-2">Confirmar contraseña</label>

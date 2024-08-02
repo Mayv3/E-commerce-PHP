@@ -4,8 +4,8 @@ require_once __DIR__ . '/../utilities/getProductById.php';
 if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])): ?>
     <p class="text-dark">No hay productos en el carrito</p>
 <?php else: ?>
-    <div>
-        <h1 class="text-center">Tu carrito</h1>
+    <div class="w-50">
+        <h1 class="text-center">Carrito de compras</h1>
         <ul class="m-0 p-0 ul-cart list-group">
             <?php
             $totalPrice = 0;
@@ -24,7 +24,7 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])): ?>
                                 <span>Cantidad: <?= $item['quantity'] ?></span>
                             </div>
                         </div>
-                        <p class="badge bg-primary rounded mx-2 p-2 price-cart">$<?= $productTotal ?></p>
+                        <p class="text-dark fs-4  badge fst-italic rounded mx-4 p-2 price-cart">$<?= $productTotal ?></p>
                         <form method="post" action="utilities/deleteProduct.php">
                             <input type="hidden" name="product_id" value="<?= $product->get_id() ?>">
                             <input type="submit" value="Eliminar" class="btn-delete">
@@ -35,7 +35,7 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])): ?>
         </ul>
         <div class="d-flex justify-content-between align-items-center mt-2 mx-3">
             <span class="fs-3">Total</span>
-            <strong class="fs-4">$<?= $totalPrice ?></strong>
+            <strong class="fs-4 fst-italic">$<?= $totalPrice ?></strong>
         </div>
     </div>
     <div class="text-center mt-3">
