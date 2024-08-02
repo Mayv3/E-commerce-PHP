@@ -3,7 +3,7 @@
         <div class="justify-content-center wrapper h-100 row no-gutters">
             <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                 <div class="contact-wrap w-100 p-md-5 p-4">
-                    <h3 class="mb-4">¡Contáctanos!</h3>
+                    <h1 class="mb-4">¡Contactanos!</h1>
                     <form method="POST" id="contactForm" name="contactForm" class="contactForm">
                         <div class="row">
                             <div class="col-md-6">

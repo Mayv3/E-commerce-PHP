@@ -1,11 +1,10 @@
 <?php
 $user = new User();
 $user->set_by_id($_GET['id_user']);
-$purchases = $user->get_user_purchases()
-    ?>
+$purchases = $user->get_user_purchases() ?>
 
 <div class="mb-4 p-3 users">
-    <h2 class="mb-3">Compras</h2>
+    <h1 class="mb-3">Compras</h1>
     <table class="table table-bordered">
         <thead class="thead-dark">
             <tr>
@@ -28,7 +27,7 @@ $purchases = $user->get_user_purchases()
                         <td class="text-center"><?php echo $date_purchase; ?></td>
                         <td class="text-center">$<?php echo $total_purchase; ?></td>
                         <td class="text-center"><a
-                                href="../index.php?section=detalleCompra&id_purchase=<?php echo $purchase_id; ?>"
+                                href="../index.php?section=detailPurchase&id_purchase=<?php echo $purchase_id; ?>"
                                 class="btn px-4 py-2">Detalle</a></td>
                     </tr>
                     <?php

@@ -13,7 +13,7 @@ $routes = [
     'profile-user' => ['auth_required' => true],
     'cart' => ['auth_required' => true],
     'checkout' => ['auth_required' => true],
-    'detalleCompra' => ['auth_required' => true],
+    'detailPurchase' => ['auth_required' => true],
 ];
 
 $view = isset($_GET['section']) ? $_GET['section'] : 'home';
@@ -35,7 +35,6 @@ if (isset($current_route['auth_required']) && !$auth->is_loged()):
     header('Location: index.php?section=login');
 endif;
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">

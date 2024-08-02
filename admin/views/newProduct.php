@@ -2,16 +2,11 @@
 require_once __DIR__ . '/../../utilities/getAllCategories.php';
 
 $categories = get_all_categories();
-
 $errors = $_SESSION['errors'] ?? [];
 unset($_SESSION['errors']);
-
 $oldData = $_SESSION['old-data'] ?? [];
 unset($_SESSION['old-data']);
 ?>
-
-
-
 <section class="p-4">
     <h1 class="mb-4 display-5">Publicar un nuevo producto</h1>
     <form action="actions/addProduct.php" method="post" enctype="multipart/form-data">
@@ -61,7 +56,6 @@ unset($_SESSION['old-data']);
                 <?php endif; ?>
             </div>
         </div>
-
         <div>
             <label for="detail" class="h5">Detalle<span class="small">(mínimo 10 caracteres)</span></label>
             <textarea id="detail" name="detail" class="form-control" aria-label="Detalle del producto"

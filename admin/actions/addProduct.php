@@ -12,7 +12,6 @@ if (!$auth->is_loged()):
     $_SESSION['message'] = '401: No estas autorizado a ingresar a esta sección.';
     $_SESSION['message_type'] = 'danger';
     header('Location: ../index.php?section=login');
-
 endif;
 
 $tittle = $_POST['tittle'];
@@ -21,9 +20,8 @@ $description = $_POST['description'];
 $detail = $_POST['detail'];
 $category = $_POST['category'];
 $image = $_FILES['image'];
-
 $errors = [];
-
+$nameImage = '';
 
 //Validate product name
 if (empty($tittle)):
@@ -70,7 +68,6 @@ if (count($errors) > 0):
     exit;
 endif;
 
-$nameImage = '';
 if (!empty($image['tmp_name'])):
     $nameImage = date('Ymd_his') . '_' . $image['name'];
     move_uploaded_file($image['tmp_name'], __DIR__ . '/../../img/' . $nameImage);

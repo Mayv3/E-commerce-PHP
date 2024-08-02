@@ -4,10 +4,7 @@ session_start();
 
 $password = $_POST['password'];
 $email = $_POST['email'];
-
 $auth = new Authentication();
-
-
 $auth_result = $auth->verify_credentials($email, $password);
 
 if ($auth_result == true):

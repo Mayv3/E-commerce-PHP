@@ -1,9 +1,8 @@
 <?php
 require_once __DIR__ . '/../bootstrap/autoload.php';
 require_once __DIR__ . '/../utilities/getProductById.php';
+session_start(); //before perform any actions we check if the user is logged
 
-//before perform any actions we check if the user is logged
-session_start();
 $auth = new Authentication();
 if (!$auth->is_loged()) {
     header('Location: ../index.php?section=login');

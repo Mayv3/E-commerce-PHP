@@ -1,12 +1,7 @@
 <?php
-$query = 'SELECT users.*, roles.rolename
-FROM users
-JOIN roles ON users.user_role = roles.id_rol;';
-
+$query = 'SELECT users.*, roles.rolename FROM users JOIN roles ON users.user_role = roles.id_rol;';
 $users = make_query($query);
-
 ?>
-
 <div class="p-2 users">
     <h1>Lista de usuarios</h1>
     <p class="text-dark mb-4">Aqui podrás ver el listado de usuarios de tu aplicación</p>

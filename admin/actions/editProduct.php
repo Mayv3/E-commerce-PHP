@@ -4,29 +4,24 @@ require_once __DIR__ . '/../../utilities/getProductById.php';
 require_once __DIR__ . '/../../bootstrap/autoload.php';
 session_start();
 
-
 $auth = new Authentication();
-
-//this action requires authorization, 
-// so we check if the user is logged before actions
-if (!$auth->is_loged()):
-
-    $_SESSION['message'] = '401: No estas autorizado a ingresar a esta sección.';
-    $_SESSION['message_type'] = 'danger';
-    header('Location: ../index.php?section=login');
-
-endif;
-
 $id = $_GET['id']; //obtained by url
-
 $tittle = $_POST['tittle'];
 $price = $_POST['price'];
 $description = $_POST['description'];
 $detail = $_POST['detail'];
 $category = $_POST['category'];
 $image = $_FILES['image'];
-
 $errors = [];
+
+//this action requires authorization, 
+// so we check if the user is logged before actions
+if (!$auth->is_loged()):
+    $_SESSION['message'] = '401: No estas autorizado a ingresar a esta sección.';
+    $_SESSION['message_type'] = 'danger';
+    header('Location: ../index.php?section=login');
+endif;
+
 
 //Validate product name
 if (empty($tittle)):
@@ -34,6 +29,7 @@ if (empty($tittle)):
 elseif (strlen($tittle) < 5):
     $errors['tittle'] = 'El nombre del producto debe tener al menos 5 caracteres';
 endif;
+
 //Validate product price
 if (empty($price)):
     $errors['price'] = 'El precio del producto es obligatorio';
@@ -73,8 +69,6 @@ if (count($errors) > 0):
 endif;
 
 if ($image['name'] !== ''): //if the user sent a new image file
-
-
     $nameImage = '';
     if (!empty($image['tmp_name'])):
         $nameImage = date('Ymd_his') . '_' . $image['name'];
@@ -109,7 +103,6 @@ else:
               WHERE id_item = ?";
     $params = [$tittle, $price, $description, $detail, $category, $id];
 endif;
-
 
 try {
     $result = make_query($query, $params);

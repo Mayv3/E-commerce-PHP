@@ -1,6 +1,6 @@
 <div class="container mt-5">
     <div class="alert alert-success" role="alert">
-        <h4 class="alert-heading">¡Compra Completa!</h4>
+        <h1 class="alert-heading">¡Compra Completa!</h1>
         <p class="text-dark">Tu compra ha sido procesada exitosamente. Gracias por tu compra.</p>
         <hr>
         <p class="mb-0 text-dark">Tu número de compra es:

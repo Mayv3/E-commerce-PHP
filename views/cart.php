@@ -5,6 +5,7 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])): ?>
     <p class="text-dark">No hay productos en el carrito</p>
 <?php else: ?>
     <div>
+        <h1 class="text-center">Tu carrito</h1>
         <ul class="m-0 p-0 ul-cart list-group">
             <?php
             $totalPrice = 0;
@@ -29,7 +30,8 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])): ?>
                             <input type="submit" value="Eliminar" class="btn-delete">
                         </form>
                     </li>
-                <?php endif; endforeach; ?>
+                <?php endif;
+            endforeach; ?>
         </ul>
         <div class="d-flex justify-content-between align-items-center mt-2 mx-3">
             <span class="fs-3">Total</span>

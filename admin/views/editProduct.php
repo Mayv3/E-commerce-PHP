@@ -3,9 +3,7 @@ require_once __DIR__ . '/../../utilities/getAllCategories.php';
 require_once __DIR__ . '/../../utilities/getProductById.php';
 
 $id = $_GET['id']; //obtained by the url
-
 $categories = get_all_categories();
-
 $product = get_product_by_id($id);
 
 if ($product == null):
@@ -64,7 +62,6 @@ else:
                     <?php endif; ?>
                 </div>
             </div>
-
             <div>
                 <label for="detail" class="h5">Detalle <span class="small">(mínimo 10 caracteres)</span></label>
                 <textarea id="detail" name="detail" class="form-control" aria-label="Detalle del producto"
@@ -76,5 +73,4 @@ else:
             <button type="submit" class="btn-warning w-100 rounded border-0 my-4">Editar</button>
         </form>
     </section>
-
 <?php endif; ?>

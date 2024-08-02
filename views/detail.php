@@ -38,7 +38,7 @@ if (isset($product)):
         <p class="fw-bold fs-3 mt-5">También podría interesarte</p>
         <?php require "./components/RandomList.php" ?>
     </div>
-    <!-- if dont render the id render the error  si el id no existe renderiza error -->
+    <!-- if don't render the id render the error, if the id doesn't exist shows the error-->
 <?php else: ?>
     <div class="d-flex flex-column p-5 align-items-center">
         <h2 class="text-center pb-3">El producto buscado no existe</h2>

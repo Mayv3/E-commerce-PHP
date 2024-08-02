@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../bootstrap/autoload.php';
 session_start();
+
 $routes = [
     'login' => [],
     'dashboard' => ['auth_required' => true],
@@ -10,7 +11,6 @@ $routes = [
     'users' => ['auth_required' => true],
     'userPurchases' => ['auth_required' => true],
 ];
-
 $view = isset($_GET['section']) ? $_GET['section'] : 'dashboard';
 
 if (!isset($routes[$view])) {
@@ -28,7 +28,6 @@ $current_route = $routes[$view];
 if (isset($current_route['auth_required']) && !$auth->is_loged() || !$auth->is_admin() && isset($current_route['auth_required'])):
     header('Location: index.php?section=login');
 endif;
-
 ?>
 
 <!DOCTYPE html>

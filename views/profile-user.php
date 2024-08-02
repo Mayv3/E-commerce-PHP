@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../bootstrap/autoload.php';
+
 $auth = new Authentication();
 $user = $auth->get_session_user();
 $purchases = $user->get_user_purchases()
@@ -22,7 +23,7 @@ $purchases = $user->get_user_purchases()
                         <p class="col-4 text-center text-black"><?php echo $date_purchase; ?></p>
                         <p class="col-4 text-center text-black">$<?php echo $total_purchase; ?></p>
                         <p class="col-4 text-center text-black"><a
-                                href="index.php?section=detalleCompra&id_purchase=<?php echo $purchase_id; ?>"
+                                href="index.php?section=detailPurchase&id_purchase=<?php echo $purchase_id; ?>"
                                 class="btn px-2 py-2 ">Detalle</a>
                         </p>
                     </li>

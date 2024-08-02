@@ -1,5 +1,6 @@
 <?php
 require_once '../utilities/getAllProducts.php';
+
 $products = get_all_products();
 ?>
 <section class="w-100 mt-5">

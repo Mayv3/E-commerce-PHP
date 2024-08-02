@@ -4,7 +4,7 @@
       <div class="col-12 col-lg-6 col-xl-7">
         <div class="row justify-content-xl-center">
           <div class="col-12 col-xl-11">
-            <h2 class="mb-3">¿Quiénes somos?</h2>
+            <h1 class="mb-3">¿Quiénes somos?</h1>
             <p class="lead fs-5 text-secondary mb-3">En Qubo Indumentaria, nos dedicamos a crear prendas de vestir que
               reflejan estilo, comodidad y calidad. Desde nuestros inicios, hemos estado comprometidos con la excelencia
               en diseño y fabricación, ofreciendo a nuestros clientes una experiencia única en moda.</p>

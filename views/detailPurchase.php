@@ -1,13 +1,14 @@
 <?php
 require __DIR__ . '/../utilities/getPurhcaseItems.php';
+
 $id_purchase = $_GET['id_purchase'];
 $purchase_items = get_purchase_items($id_purchase);
 $total = 0; //total buy value
+
 foreach ($purchase_items as $item) {
     $total += $item['item_price'] * $item['item_quantity'];
 }
 ?>
-
 <div class="container mt-4">
     <h1 class="mb-4">Detalle de compra <?= htmlspecialchars($id_purchase) ?></h1>
     <ul class="list-group my-4">

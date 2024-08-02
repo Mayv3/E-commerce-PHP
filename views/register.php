@@ -1,5 +1,6 @@
 <section
     class="login-container bg-dark text-white rounded p-5 d-flex justify-content-center flex-column align-items-center">
+    <h1>Registrarse</h1>
     <form method="post" action="utilities/userRegister.php" class="d-flex flex-column w-100">
         <label for="email" class="label-login mb-2">Correo electrónico</label>
         <input type="email" placeholder="correo electrónico" id="email" name="email" class="input-login">
