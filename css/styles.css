@@ -261,11 +261,23 @@ p a:hover {
 .users {
   width: 100%;
 }
+.cart-div{
+  width: 100vw !important;
+}
+.cart-body-height{
+  min-height: 240px !important;
+}
+.tittle-heigth{
+  min-height: 60px;
+}
 @media (min-width: 768px) {
   .login-container {
     width: 40%;
   }
   .users {
     width: 75%;
+  }
+  .cart-div{
+    width: 60vw !important;
   }
 }

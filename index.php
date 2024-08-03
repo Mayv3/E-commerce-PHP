@@ -107,7 +107,6 @@ endif;
 
                 </div>
             </div>
-            </div>
         </nav>
     </header>
     <main class="d-flex justify-content-center align-items-center flex-column">

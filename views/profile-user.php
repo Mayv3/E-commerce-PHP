@@ -38,4 +38,3 @@ $purchases = $user->get_user_purchases()
         </ul>
     </div>
 </div>
-</div>

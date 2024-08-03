@@ -4,7 +4,7 @@ require_once __DIR__ . '/../utilities/getProductById.php';
 if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])): ?>
     <p class="text-dark">No hay productos en el carrito</p>
 <?php else: ?>
-    <div class="w-50">
+    <div class="cart-div">
         <h1 class="text-center">Carrito de compras</h1>
         <ul class="m-0 p-0 ul-cart list-group">
             <?php

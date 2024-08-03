@@ -28,7 +28,7 @@ $purchases = $user->get_user_purchases() ?>
                         <td class="text-center">$<?php echo $total_purchase; ?></td>
                         <td class="text-center"><a
                                 href="index.php?section=detailPurchase&id_purchase=<?php echo $purchase_id; ?>"
-                                class="btn px-4 py-2">Detalle</a></td>
+                                class="btn px-2">Detalle</a></td>
                     </tr>
                     <?php
                 }
@@ -42,5 +42,4 @@ $purchases = $user->get_user_purchases() ?>
             ?>
         </tbody>
     </table>
-</div>
 </div>

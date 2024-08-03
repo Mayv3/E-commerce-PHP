@@ -22,7 +22,7 @@ $users = make_query($query);
                     <td class="text-center"><?php echo htmlspecialchars($user['rolename']); ?></td>
                     <td class="text-center">
                         <a href="index.php?section=userPurchases&id_user=<?php echo $user['id_user'] ?>"
-                            class="btn px-2 py-1">Ver Compras</a>
+                            class="btn px-1">Ver Compras</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

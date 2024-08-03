@@ -29,9 +29,9 @@ class Product
                     <div class="card h-100">
                         <div class="badge bg-dark text-white position-absolute">Sale</div>
                         <img class="card-img" src="img/' . $this->image . '" alt="' . $this->name . '">
-                        <div class="card-body p-4">
+                        <div class="card-body cart-body-height p-4">
                             <div class="text-center">
-                                <p class="fw-bolder text-dark fs-4">' . $this->name . '</p>
+                                <p class="fw-bolder text-dark fs-4 tittle-heigth">' . $this->name . '</p>
                                 <span class="text-muted text-decoration-line-through">$' . ($this->price + 5.99) . '</span> $' . $this->price . '
                                 <p class="text-dark fs-5"> Categoria: ' . $this->category_name . '</p>
                             </div>

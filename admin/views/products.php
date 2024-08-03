@@ -36,7 +36,7 @@ $products = get_all_products();
                             <div class="d-flex justify-content-between">
                                 <a class="primary-button text-center edit-button "
                                     href='index.php?section=editProduct&id=<?php echo $product->get_id(); ?>'>Editar</a>
-                                <button class="primary-button delete-button " id=<?php echo $product->get_id(); ?>>Eliminar</button>
+                                <button class="primary-button delete-button" id=<?php echo $product->get_id(); ?>>Eliminar</button>
                             </div>
                         </div>
                     </li>
